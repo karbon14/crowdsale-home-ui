@@ -1,0 +1,42 @@
+.no-match {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(/background.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__header {
+    text-align: center;
+    margin-top: 5%;
+
+    img {
+      cursor: pointer;
+    }
+
+    h1 {
+      color: #009cee;
+      font-weight: 300;
+      font-size: 5vh;
+      line-height: 1;
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  &__footer {
+    text-align: center;
+    margin-bottom: 5%;
+
+    p {
+      font-size: 23px;
+      margin-bottom: 50px;
+    }
+  }
+}

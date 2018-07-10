@@ -1,0 +1,17 @@
+.roadmap {
+  width: 100%;
+  min-height: 100vh;
+  background: #ebf3fc;
+
+  &:before {
+    content: '';
+    background: url(/pattern-roadmap.png) 50% 50% no-repeat fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 0.5;
+  }
+}
+

@@ -1,0 +1,105 @@
+.advantages {
+  .features {
+    max-width: 1140px;
+    width: 100%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+  }
+
+  .links {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 90px;
+    justify-content: center;
+
+    :global(button) {
+      margin: 10px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .advantages {
+    .features {
+      max-width: 1140px;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .advantages {
+    max-width: 720px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    .features {
+      max-width: 720px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .advantages{
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+    .features {
+      padding-left: 20px;
+      padding-right: 20px;
+      max-width: 100%;
+      flex-direction: column;
+      align-items: center;
+
+      :global(.feature) {
+        max-width: initial;
+      }
+    }
+
+    .links {
+      padding-top: 0;
+
+      :global(button.last) {
+        margin: 10px 0 10px 5px;
+        font-size: 12px;
+      }
+
+      :global(button:not(.last)) {
+        margin: 10px 5px 10px 0;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .advantages {
+    .links {
+      :global(button) {
+        font-size: 10px !important;
+        min-width: 110px;
+        line-height: 40px;
+        padding: 0 12px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .advantages {
+    .links {
+      :global(button) {
+        font-size: 8px !important;
+        line-height: 41px !important;
+      }
+    }
+  }
+}

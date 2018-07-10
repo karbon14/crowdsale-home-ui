@@ -1,0 +1,123 @@
+.team {
+  &-member {
+    max-width: 190px;
+    right: 0px;
+    text-align: left;
+    top: 0px;
+    width: 190px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    background: rgb(27, 48, 164) none repeat scroll 0% 0% / auto padding-box
+      border-box;
+    flex: 1 1 auto;
+    margin: 50px 15px 50px 50px;
+    outline: #fff none 0px;
+    padding: 130px 20px 0 25px;
+  }
+  &-photo {
+    transition: all 0.5s ease;
+    bottom: 151px;
+    height: 160px;
+    left: -38px;
+    position: absolute;
+    right: 68px;
+    top: -50px;
+    width: 160px;
+    &:before {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      content: '';
+      background-image: linear-gradient(
+        to top left,
+        rgba(41, 0, 117, 0.65) 0%,
+        rgba(9, 109, 223, 0.65) 100%
+      );
+      transition: all 0.5s ease;
+    }
+    &:after {
+      position: absolute;
+      top: 24px;
+      right: -33px;
+      content: '';
+      height: 3px;
+      width: 65px;
+      background-image: linear-gradient(to right, #16a3fe 0%, #41faa4 100%);
+      transition: all 0.5s ease;
+    }
+    &:hover {
+      top: -60px;
+      &:before {
+        opacity: 0.5;
+      }
+    }
+    & img {
+      width: 100vw;
+      outline: 0;
+      border: 0 none;
+      vertical-align: top;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  &-name {
+    line-height: 1.33;
+    font-weight: 600;
+    font-size: 1.33em;
+    color: #fff;
+    text-align: left;
+    margin: 0px 0px 6px;
+  }
+  &-title {
+    color: #41faa4;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.86;
+    text-align: left;
+  }
+  &-social {
+    bottom: 129px;
+    color: #fff;
+    height: 132px;
+    left: 125.141px;
+    position: absolute;
+    right: 0px;
+    text-align: left;
+    top: 0px;
+    margin: 0px;
+    padding: 15px 25px;
+    & li {
+      line-height: 34px;
+      color: #fff;
+      list-style: none outside none;
+      & a {
+        color: #16a3fe;
+        text-align: left;
+        list-style: none outside none;
+        transition: all 0.5s ease 0s;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+  &-info {
+    color: #fff;
+    height: 106px;
+    text-align: left;
+    width: 145px;
+  }
+  
+  & .green-line {
+    bottom: -18px;
+    color: #41faa4;
+    display: block;
+    height: 178px;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 160px;
+  }
+}

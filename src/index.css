@@ -1,0 +1,46 @@
+@import '~normalize.css';
+@import '~nprogress/nprogress.css';
+@import '~font-awesome/css/font-awesome.css';
+@import './styles/fonts/index.css';
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+html,
+body {
+  font-family: "san_francisco_textregular";
+  font-style: normal;
+  font-weight: normal;
+  background-color: #fff;
+  color: #586378;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.15;
+}
+
+body {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body,
+body #app,
+body #app > div[data-reactroot] {
+  min-width: 100%;
+  min-height: 100%;
+}

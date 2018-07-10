@@ -1,0 +1,134 @@
+.tokens {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .container {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    .sale {
+      width: 50%;
+      height: 240px;
+      display: flex;
+      margin-bottom: 30px;
+      
+      .info {
+        margin-bottom: 20px;
+        position: relative;
+        padding-left: 16px;
+
+        &-section {
+          display: flex;
+          width: 50%;
+          flex-direction: column;
+        }
+        
+        &::before {
+          content: "";
+          background: #46bdf4;
+          height: 5px;
+          width: 5px;
+          border-radius: 50%;
+          position: absolute;
+          top: 9px;
+          left: 0;
+        }
+
+        h6 {
+          color: #fff;
+          font-size: 1.07em;
+          line-height: 1.33;
+          font-weight: 600;
+          margin: 0 0 2px 0;
+        }
+
+        p {
+          color: #7ab9ff;
+          font-size: 1em;
+          margin: 0 0 18px;
+          line-height: 1.86;
+          font-weight: 300;
+        }
+      }
+    }
+
+    .distribution {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .tokens {
+    .container {
+      max-width: 960px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .tokens {
+    .container {
+      max-width: 1140px;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .tokens {
+    .container {
+      max-width: 720px;
+      flex-direction: column;
+      align-items: center;
+
+      .sale {
+        width: 100%;
+        margin-bottom: 30px;
+        
+      }
+
+      .timer {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .distribution {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tokens {
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+      max-width: 100%;
+
+      .sale {
+        height: initial;
+        flex-direction: column;
+      
+        .info {
+          &-section {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

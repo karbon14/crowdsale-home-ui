@@ -1,0 +1,71 @@
+.counter {
+  max-width: 425px;
+  padding: 40px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to right, #16a3fe 0%, #41faa4 100%);
+
+  h6 {
+    color: #fff;
+    font-size: 1.07em;
+    line-height: 1.33;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 0 18px;
+    text-transform: uppercase;
+  }
+
+  .time {
+    display: flex;
+    padding-bottom: 33px;
+
+    .unit {
+      min-width: 85px;
+      display: flex!important;
+      align-content: stretch!important;
+      flex-direction: column;
+
+      span.number {
+        color: #fff;
+        font-size: 45px;
+        font-weight: 300;
+        line-height: 1;
+        display: block;
+        margin-bottom: 5px;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 15px;
+
+        :not(.last):after {
+          position: absolute;
+          right: -5px;
+          bottom: 5px;
+          content: ":";
+          color: #fff;
+          font-size: 40px;
+        }
+      }
+ 
+      span:not(.number) {
+        color: #340075;
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 1;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    } 
+  }
+
+  :global(button) {
+    border-radius: 19px;
+    background: linear-gradient(to right, #340075 0%, #0d9ee0 100%);
+
+    &:hover {
+      background: linear-gradient(to right, #0d9ee0 0%, #340075 100%);
+    }
+  }
+}

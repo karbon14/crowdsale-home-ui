@@ -1,0 +1,24 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "plugins": [
+    "prettier"
+  ],
+  "extends": "eslint:recommended",
+  "parser": "babel-eslint",
+  "rules": {
+    "no-extra-semi": 0,
+    "no-unused-vars": ["error", {"ignoreRestSiblings": true}],
+    "linebreak-style": ["error", "unix"],
+    "prettier/prettier": [
+      "warn",
+      {
+        "singleQuote": true,
+        "semi": false
+      }
+    ]
+  }
+}

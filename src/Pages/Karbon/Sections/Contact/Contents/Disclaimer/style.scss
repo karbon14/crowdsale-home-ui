@@ -1,0 +1,42 @@
+div {
+  width: 100%;
+  margin: 40px auto 0 auto;
+  padding: 0 15px;
+
+  p {
+    color: #7ab9ff;
+    font-size: 13px;
+    line-height: 1.86;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 768px) {
+  div {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  div {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  div {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  div {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 1200px) {
+  div {
+    flex-direction: column;
+  }
+}

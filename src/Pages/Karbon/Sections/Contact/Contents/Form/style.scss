@@ -1,0 +1,17 @@
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 450px;
+  
+  :glonal(div:not(:last-of-type)) {
+    margin: 0 0 40px 0;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .container {
+    margin-top: 20px;
+    padding: 0;
+    max-width: initial;
+  }
+}

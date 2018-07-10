@@ -1,0 +1,62 @@
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 350px;
+  float: right;
+
+  p {
+    font-size: 1em;
+    margin: 0;
+    color: #313c56;
+    line-height: 1.86;
+    font-weight: 300;
+  }
+
+  .channels {
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        list-style: none;
+        margin: 18px 0;
+
+        em {
+          position: relative;
+          font-size: 16px;
+          line-height: 38px;
+          width: 38px;
+          text-align: center;
+          border-radius: 50%;
+          margin-right: 15px;
+          background-image: linear-gradient(to right, #16a3fe 0%, #41faa4 100%);
+
+          &:after {
+            position: absolute;
+            content: '';
+            top: 2px;
+            left: 2px;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: #fff;
+          }
+
+          &:before {
+            color: #46bdf4;
+            position: relative;
+            z-index: 3;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .container {
+    padding: 0;
+    max-width: initial;
+    float: left;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "presets": [
+    "react",
+    ["env", {
+      "targets": { "browsers": ["> 2%", "IE 11", "safari > 9"] }
+    }],
+    "stage-2"
+  ],
+  "plugins": [
+    [
+      "styled-jsx/babel",
+      { "plugins": ["styled-jsx-plugin-sass"] }
+    ]
+  ]
+}

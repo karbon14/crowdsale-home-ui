@@ -1,0 +1,120 @@
+.faq {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+
+  .tabs {
+    width: 100%;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    :global(.contents) {
+      display: flex;
+      margin: 0 -15px;
+    }
+
+    :global(.content-container) {
+      padding: 30px 0 0;
+
+      .content-section {
+        width: 50%;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+
+      :global(.title-description) {
+        padding: 15px 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .faq {
+    .tabs {
+      max-width: 960px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .faq {
+    .tabs {
+      max-width: 1140px;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .faq {
+    .tabs {
+      max-width: 720px;
+
+      :global(.tabs-container) {
+        :global(.nav-item) {
+          padding: 10px 0;
+          min-width: 90px;
+        }
+      }
+
+      :global(.tabs-container) {
+        .nav-item {
+          margin: 0;
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .faq {
+    .tabs {
+      :global(.tabs-container) {
+        :global(.nav-item) {
+          font-size: 12px;
+          padding: 10px 0;
+          min-width: initial;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .faq {
+    .tabs {
+      padding-left: 20px;
+      padding-right: 20px;
+      max-width: 100%;
+
+      :global(.contents) {
+        flex-direction: column;
+      }
+
+      :global(.content-container) {
+        .content-section {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .faq {
+    .tabs {
+      :global(.tabs-container) {
+        :global(.nav-item) {
+          padding: 10px 20px;
+        }
+      }
+
+      :global(ul) {
+        display: block !important;
+        text-align: center;
+      }
+    }
+  }
+}

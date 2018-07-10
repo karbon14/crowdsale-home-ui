@@ -1,0 +1,49 @@
+.team {
+  width: 100%;
+  min-height: 100vh;
+
+  &:before {
+    content: '';
+    background: url(/pattern-team.png) 50% 50% no-repeat fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 0.5;
+  }
+
+  .members {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+  }
+}
+
+@media (min-width: 992px) {
+  .team {
+    .members {
+      max-width: 960px;
+      margin: 0 auto;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .team {
+    .members {
+      max-width: 1140px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .team {
+    .members {
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 0;
+    }
+  }
+}

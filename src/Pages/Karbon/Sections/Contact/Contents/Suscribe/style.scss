@@ -1,0 +1,143 @@
+.container {
+  display: flex;
+  margin-left: -30px;
+  flex-direction: column;
+
+  h6 {
+    color: #fff;
+    font-size: 1.07em;
+    line-height: 1.33;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+
+  .suscribe {
+    &-container {
+      position: relative;
+    }
+
+    &-input {
+      color: rgb(255, 255, 255);
+      height: 56px;
+      text-decoration: none solid rgb(255, 255, 255);
+      width: calc(100% - 55px);
+      column-rule-color: rgb(255, 255, 255);
+      perspective-origin: 145px 28px;
+      transform-origin: 145px 28px;
+      caret-color: rgb(255, 255, 255);
+      background: rgb(13, 68, 183);
+      border: 1px solid rgb(13, 68, 183);
+      border-radius: 5px 5px 5px 5px;
+      font: normal normal 400 normal 15px / 52px Poppins, sans-serif;
+      outline: rgb(255, 255, 255) none 0px;
+      padding: 1px 1px 1px 15px;
+      transition: all 0.5s ease 0s;
+
+      &[data-invalid='true'] {
+        border: 1px solid #d2636d;
+      }
+
+      &::-webkit-input-placeholder {
+        opacity: 0.6;
+        color: #fff;
+      }
+
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover, 
+      &:-webkit-autofill:focus {
+        -webkit-text-fill-color: rgb(255, 255, 255);
+        transition: background-color 5000s ease-in-out 0s;
+      }
+    }
+
+    &-button {
+      bottom: 5px;
+      background: rgb(22, 164, 253);
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+      display: block;
+      height: 46px;
+      max-width: 100%;
+      min-width: 110px;
+      position: absolute;
+      right: 0;
+      text-decoration: none solid rgb(255, 255, 255);
+      font-size-adjust: 100%;
+      text-transform: uppercase;
+      top: 5px;
+      white-space: nowrap;
+      width: 110px;
+      z-index: 2;
+      column-rule-color: rgb(255, 255, 255);
+      perspective-origin: 55px 23px;
+      transform-origin: 55px 23px;
+      user-select: none;
+      caret-color: rgb(255, 255, 255);
+      border: 0px none rgb(255, 255, 255);
+      border-radius: 23px 23px 23px 23px;
+      font: normal normal 600 normal 12px / 46px Poppins, sans-serif;
+      outline: rgb(255, 255, 255) none 0px;
+      padding: 0px 10px;
+      transition: all 0.5s ease 0s;
+      z-index: 2;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:before {
+        background: linear-gradient(
+          to right,
+          rgb(65, 250, 164) 0%,
+          rgb(22, 163, 254) 100%
+        );
+        border-radius: 23px 23px 23px 23px;
+        bottom: 0px;
+        content: '';
+        height: 46px;
+        left: 0px;
+        right: 0px;
+        transition: all 0.5s ease 0s;
+        top: 0px;
+        opacity: 1;
+        position: absolute;
+        z-index: -2;
+      }
+
+      &:hover:before {
+        opacity: 1;
+      }
+
+      &:after {
+        position: absolute;
+        border-radius: 23px 23px 23px 23px;
+        left: 0px;
+        top: 0px;
+        content: '';
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 1;
+        background: rgb(22, 164, 253);
+        transition: all 0.5s ease;
+      }
+
+      &:hover:after {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    margin-top: 60px;
+    margin-left: initial;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin-right: 15px;
+  }
+}

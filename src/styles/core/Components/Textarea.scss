@@ -1,0 +1,102 @@
+div {
+    position: relative;
+    padding: 0;
+    margin: 5px;
+    border: none;
+    overflow: visible;
+    textarea {
+      height: 105px;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px 10px 8px;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      border-bottom: 1px solid #16a3fe;
+      font-size: 120%;
+      outline: none;
+      cursor: text;
+      transition: all 0.5s ease 0s;
+      &:not(:focus)[value=''] ~ label {
+        transform: scale(1);
+      }
+      &:not(:focus):not([attribute='value']) ~ label {
+        transform: scale(1);
+      }
+      &:not([value='']) ~ label {
+        transform: scale(0.6);
+      }
+      &[value]:not([value='']) ~ label {
+        transform: scale(0.6);
+        top: 10px;
+      }
+      &:focus ~ label {
+        top: 10px;
+        transform: scale(0.6);
+      }
+      &:valid ~ label {
+        transform: scale(0.6);
+      }
+      &:focus ~ hr {
+        transform: scaleX(1);
+        visibility: visible;
+      }
+      &::placeholder {
+        transition: all 0.5s ease 0s;
+        color: #7ab9ff;
+      }
+      &:not(:focus)::placeholder {
+        color: transparent;
+      }
+      &::-webkit-validation-bubble-message {
+        display:none;
+      }
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover, 
+      &:-webkit-autofill:focus {
+        transition: background-color 5000s ease-in-out 0s;
+      }
+      &[data-invalid='true'] {
+        border-bottom: 1px solid #d2636d;
+        &~ hr {
+          background: #d2636d;
+        }
+        &:focus::placeholder {
+          color: #d2636d;
+        }
+        &~ label {
+          color: #d2636d;
+        }
+      }
+    }
+    hr {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 104px;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 2px;
+      border: none;
+      background: #7ab9ff;
+      font-size: 1px;
+      will-change: transform, visibility;
+      transition: all 200ms ease-out;
+      transform: scaleX(0);
+      visibility: hidden;
+      z-index: 10;
+    }
+    label {
+      position: absolute;
+      left: 10px;
+      font-size: 120%;
+      color: #7ab9ff;
+      transform-origin: 0 -150%;
+      transition: transform 300ms ease;
+      pointer-events: none;
+      top: 75px;
+    }
+  }
+  

@@ -1,0 +1,6 @@
+export { Media } from './Media'
+export { Sections } from './Sections'
+export { Disclaimer } from './Disclaimer'
+export { Form } from './Form'
+export { Questions } from './Questions'
+export { Suscribe } from './Suscribe'

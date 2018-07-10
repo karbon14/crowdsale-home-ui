@@ -1,0 +1,14 @@
+.karbon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    to bottom right,
+    #290075 0%,
+    #086ddf 100%
+  );
+}

@@ -1,0 +1,126 @@
+.apps {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+
+  .container {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+
+    .description {
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      flex-shrink: 1;
+      align-items: center;
+
+
+      p {
+        color: #637097;
+        font-size: 1em;
+        margin: 0 0 18px;
+        line-height: 1.86;
+        font-weight: 300;
+        padding-right: 15px;
+      }
+
+      ul {
+        margin-bottom: 20px;
+
+        li {
+          &:before {
+            background: #41faa4;
+            content: "";
+            height: 5px;
+            width: 5px;
+            border-radius: 50%;
+            position: absolute;
+            top: 13px;
+            left: 0;
+          }
+
+          color: #637097;
+          position: relative;
+          line-height: 2;
+          padding-left: 22px;
+          list-style: none;
+          font-size: 15px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    .phone {
+      flex: 0 0 50%;
+      max-width: 50%;
+      position: relative;
+      width: 100%;
+      min-height: 1px;
+      padding-right: 15px;
+      padding-left: 15px;
+      display: flex;
+      align-items: flex-end;
+
+      img {
+        outline: 0;
+        border: 0 none;
+        max-width: 100%;
+        height: auto;
+        vertical-align: top;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .apps {
+    .container {
+      max-width: 960px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .apps {
+    .container {
+      max-width: 1140px;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .apps {
+    .container {
+      max-width: 720px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .apps {
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+      max-width: 100%;
+      flex-direction: column;
+
+      .description {
+        width: 100%;
+      }
+
+      .phone {
+        max-width: 100%;
+      }
+    }
+  }
+}

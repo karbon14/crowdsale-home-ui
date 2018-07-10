@@ -1,0 +1,37 @@
+div {
+  ul {
+    justify-content: center;
+    display: flex;
+  }
+  .nav {
+    &-item {
+      color: #1641b5;
+      box-sizing: border-box;
+      cursor: pointer;
+      display: inline-block;
+      text-align: center;
+      border-bottom: 1px solid transparent;
+      font: normal normal 400 normal 18px / 24px Poppins, sans-serif;
+      text-transform: uppercase;
+      list-style: none outside none;
+      outline: rgb(255, 255, 255) none 0px;
+      margin: 0px 20px;
+      padding: 10px 20px;
+      min-width: 120px;
+      opacity: 0.5;
+      transition: all 0.5s ease 0s;
+      &:hover:not(.nav-active) {
+        color: #1641b5;
+        opacity: 1;
+      }
+    }
+    &-active {
+      color: #1641b5;
+      border-bottom: 1px solid #2b56f5;
+      opacity: 1;
+    }
+    &-hide {
+      display: none;
+    }
+  }
+}
