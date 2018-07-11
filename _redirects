@@ -1,0 +1,2 @@
+/api/* https://api.karbon14.org/:splat 200
+/* /index.html 200
