@@ -1,6 +1,6 @@
 import React from 'react'
 import { Karbon } from '../../../../styles/core'
-import { TabView } from '@react-core/tabView'
+import { TabView } from '@react-core/tabview'
 import style from './style.scss'
 import { Title } from '../../../../Components/Title'
 import { TitleDescription } from './TitleDescription'
