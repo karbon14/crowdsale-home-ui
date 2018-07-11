@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ResponsiveContainer, PieChart, Pie, Cell } from 'Recharts'
+import { ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'
 import style from './style.scss'
 
 const Chart = ({ description, data = [], colors = [] }) => {
