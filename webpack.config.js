@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const BUILD_DIR = path.resolve(__dirname, 'dist')
 const APP_DIR = path.resolve(__dirname, 'src')
@@ -33,6 +34,22 @@ const getPlugins = argv => {
       )
     })
   ]
+
+  if (argv.mode === 'production') {
+    plugins = [
+      ...plugins,
+      new CopyWebpackPlugin([{
+        from: './_redirects',
+        to: './_redirects',
+        toType: 'file',
+      },
+      {
+        from: './_headers',
+        to: './_headers',
+        toType: 'file',
+      }])
+    ]
+  }
 
   return plugins
 }
