@@ -1,0 +1,38 @@
+language: node_js
+sudo: required
+before_install:
+  - npm install -g greenkeeper-lockfile@1
+before_script:
+  - npm run build
+  - greenkeeper-lockfile-update
+script:
+  - npm run lint
+  - npm run start
+after_script:
+  - greenkeeper-lockfile-upload
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: karbon14-home
+    skip_cleanup: true
+    acl: public_read
+    local_dir: 'build-upload'
+    on:
+      branch: master
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: karbon14-home
+    key: dist.zip
+    bundle_type: zip
+    application: Karbon14-home
+    deployment_group: Karbon14-home
+    region: us-east-1
+    wait-until-deployed: true
+    on:
+      branch: master
+script:
+  - zip -r dist package.json package-lock.json dist
+  - mkdir -p build-upload
+  - mv dist.zip build-upload/dist.zip
