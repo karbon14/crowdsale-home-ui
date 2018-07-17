@@ -7,6 +7,5 @@ before_script:
   - greenkeeper-lockfile-update
 script:
   - npm run lint
-  - npm run start
 after_script:
   - greenkeeper-lockfile-upload
