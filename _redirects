@@ -1,2 +1,2 @@
-/api/* https://www.karbon14.netlify.com/* https://karbon14.org/:splat 301!
+/api/* https://api.karbon14.org/v1/:splat 200
 /* /index.html 200
