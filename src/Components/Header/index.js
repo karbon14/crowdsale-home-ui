@@ -7,8 +7,13 @@ import style from './style.scss'
 import logo from './Assets/K14-Logo.svg'
 import { Sticky, Scroll, Resize, MobileMenu } from './Helpers'
 
-const DownloadWhitepaper = ({ API_URL = process.env.API_URL }) =>
-  window.open(`${API_URL}/whitepaper`)
+const DownloadWhitepaper = ({ API_URL = process.env.API_URL }) => {
+  const downloadUrl = `${API_URL}/whitepaper`
+  const downloadFrame = document.createElement("iframe"); 
+  downloadFrame.setAttribute('src',downloadUrl);
+  downloadFrame.setAttribute('class',"screenReaderText"); 
+  document.body.appendChild(downloadFrame); 
+}
 
 const Header = ({ sections = [] }) => (
   <MobileMenu
