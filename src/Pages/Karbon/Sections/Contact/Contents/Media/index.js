@@ -24,7 +24,7 @@ const Media = ({ links }) => (
     <ul>
       {links.map((link, index) => (
         <li key={index}>
-          <a href={link.url} alt={link.name}>
+          <a href={link.url} alt={link.name} target="_blank">
             <span className={`fa ${link.icon}`} />
           </a>
         </li>
