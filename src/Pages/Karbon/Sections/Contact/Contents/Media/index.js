@@ -4,10 +4,6 @@ import style from './style.scss'
 import logo from './Assets/K14-Logo.svg'
 import { Scroll } from '../../../../../../Components/Header/Helpers'
 
-const OpenLink = url => {
-  window.open(`${url}/`)
-}
-
 const Media = ({ links }) => (
   <div className="container">
     <div>
