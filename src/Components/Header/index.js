@@ -9,10 +9,13 @@ import { Sticky, Scroll, Resize, MobileMenu } from './Helpers'
 
 const DownloadWhitepaper = ({ API_URL = process.env.API_URL }) => {
   const downloadUrl = `${API_URL}/whitepaper`
-  const downloadFrame = document.createElement("iframe"); 
-  downloadFrame.setAttribute('src',downloadUrl);
-  downloadFrame.setAttribute('class',"screenReaderText"); 
-  document.body.appendChild(downloadFrame); 
+  const downloadFrame = document.createElement('iframe')
+  downloadFrame.setAttribute('src', downloadUrl)
+  downloadFrame.setAttribute('id', 'download-frame')
+  document.body.appendChild(downloadFrame)
+  setTimeout(() => {
+    document.getElementById('download-frame').remove()
+  }, 100)
 }
 
 const Header = ({ sections = [] }) => (
