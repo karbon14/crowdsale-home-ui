@@ -4,7 +4,7 @@ import style from './style.scss'
 import logo from './Assets/K14-Logo.svg'
 import { Scroll } from '../../../../../../Components/Header/Helpers'
 
-const OpenLink = (url) => {
+const OpenLink = url => {
   window.open(`${url}/`)
 }
 
@@ -28,7 +28,12 @@ const Media = ({ links }) => (
     <ul>
       {links.map((link, index) => (
         <li key={index}>
-          <a href={link.url} alt={link.name} target="_blank" onClick={OpenLink(link.url)}>
+          <a
+            href={link.url}
+            alt={link.name}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span className={`fa ${link.icon}`} />
           </a>
         </li>
