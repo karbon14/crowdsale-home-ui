@@ -11,10 +11,10 @@ import integration from './Assets/features-integration.png'
 
 const DownloadWhitepaper = ({ API_URL = process.env.API_URL }) => {
   const downloadUrl = `${API_URL}/whitepaper`
-  const downloadFrame = document.createElement("iframe"); 
-  downloadFrame.setAttribute('src',downloadUrl);
-  downloadFrame.setAttribute('class',"screenReaderText"); 
-  document.body.appendChild(downloadFrame); 
+  const downloadFrame = document.createElement('iframe')
+  downloadFrame.setAttribute('src', downloadUrl)
+  downloadFrame.setAttribute('class', 'screenReaderText')
+  document.body.appendChild(downloadFrame)
 }
 
 const Advantages = () => (
