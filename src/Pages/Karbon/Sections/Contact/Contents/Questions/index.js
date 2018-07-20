@@ -17,7 +17,11 @@ const Questions = () => (
         </li>
 
         <li>
-          <a href="https://t.me/joinchat/HCMsRlJYuvSVUir-j6A30Q" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://t.me/joinchat/HCMsRlJYuvSVUir-j6A30Q"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <em className="fa fa-paper-plane" />
             <span>Join us on Telegram</span>
           </a>

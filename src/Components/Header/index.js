@@ -6,6 +6,7 @@ import { Button } from '@react-core/button'
 import style from './style.scss'
 import logo from './Assets/K14-Logo.svg'
 import { Sticky, Scroll, Resize, MobileMenu } from './Helpers'
+import GithubCorner from 'react-github-corner'
 
 const DownloadWhitepaper = ({ API_URL = process.env.API_URL }) => {
   const downloadUrl = `${API_URL}/whitepaper`
@@ -73,6 +74,11 @@ const Header = ({ sections = [] }) => (
                             type={isMobile ? 'primary menu' : 'secondary'}
                             icon={isMobile ? 'fa-bars menu' : ''}
                             onClick={isMobile ? onChange : DownloadWhitepaper}
+                          />
+                          <GithubCorner
+                            href="https://github.com/karbon14"
+                            target="_blank"
+                            rel="noopener noreferrer"
                           />
                         </div>
                       </div>
