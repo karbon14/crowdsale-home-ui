@@ -85,6 +85,6 @@
     "url-search-params-polyfill": "4.0.1",
     "whatwg-fetch": "2.0.4",
     "yum": "0.1.1",
-    "yup": "0.25.1"
+    "yup": "0.26.0"
   }
 }
