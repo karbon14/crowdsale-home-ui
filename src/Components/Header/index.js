@@ -75,11 +75,14 @@ const Header = ({ sections = [] }) => (
                             icon={isMobile ? 'fa-bars menu' : ''}
                             onClick={isMobile ? onChange : DownloadWhitepaper}
                           />
-                          <GithubCorner
-                            href="https://github.com/karbon14"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          />
+
+                          <div className={isMobile ? 'hide' : ''}> 
+                            <GithubCorner
+                              href="https://github.com/karbon14"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            />
+                          </div>
                         </div>
                       </div>
                     </header>
