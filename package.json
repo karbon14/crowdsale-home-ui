@@ -75,6 +75,7 @@
     "react": "16.4.1",
     "react-adopt": "0.6.0",
     "react-dom": "16.4.1",
+    "react-github-corner": "2.3.0",
     "react-powerplug": "0.1.6",
     "react-redux": "5.0.7",
     "react-router-dom": "4.3.1",
