@@ -47,7 +47,7 @@ const Tokens = () => (
       </div>
 
       <div className="timer">
-        <Counter to="2018 07 15" />
+        <Counter to="2018 12 15" />
       </div>
     </div>
 
