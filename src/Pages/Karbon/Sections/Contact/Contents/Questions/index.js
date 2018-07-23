@@ -13,7 +13,7 @@ const Questions = () => (
         </li> */}
         <li>
           <em className="fa fa-envelope" />
-          <span>team@karbon14.com</span>
+          <span>team@karbon14.org</span>
         </li>
 
         <li>

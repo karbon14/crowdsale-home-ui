@@ -22,7 +22,7 @@ const Team = () => (
           surname={'Zalazar'}
           facebook={'https://www.facebook.com/zalazarnatanael'}
           twitter={'https://twitter.com/zalazarnatanael'}
-          linkedin={'https://www.linkedin.com/in/natanael-zalazar-610a74a3'}
+          linkedin={'www.linkedin.com/in/zalazarnatanael'}
         />
       </div>
     </div>
