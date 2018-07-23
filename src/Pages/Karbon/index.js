@@ -14,7 +14,7 @@ import {
 const Karbon = () => (
   <div className="karbon">
     <Header
-      sections={['description', 'tokens', 'apps', 'team', 'faq', 'contact']}
+      sections={['description', 'tokens', 'apps', 'team', 'faq', 'contact', 'subscribe']}
     />
     <Intro />
     <Description />
