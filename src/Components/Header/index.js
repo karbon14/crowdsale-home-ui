@@ -5,6 +5,7 @@ import { Button } from '@react-core/button'
 import { DownloadWhitepaper } from '../Utils'
 import style from './style.scss'
 import logo from './Assets/K14-Logo.svg'
+import { Languageswitcher } from './Languageswitcher'
 import { Sticky, Scroll, Resize, MobileMenu } from './Helpers'
 import GithubCorner from 'react-github-corner'
 
@@ -32,6 +33,7 @@ const Header = ({ sections = [] }) => (
                             />
                           </a>
                         </div>
+                        <Languageswitcher />
                         <div className="links__area">
                           <div>
                             <ul>
