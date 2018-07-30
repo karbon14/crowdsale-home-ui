@@ -8,13 +8,13 @@ export class Switching extends React.Component {
 
   onSwitching = (event, selected) => {
     event.preventDefault()
-    
+
     this.setState({
-      selected,
+      selected
     })
   }
 
-  onToggling = (event) => {
+  onToggling = event => {
     event.preventDefault()
 
     this.setState({
@@ -27,7 +27,7 @@ export class Switching extends React.Component {
       onSwitching: this.onSwitching,
       onToggling: this.onToggling,
       isOpen: this.state.isOpen,
-      selected: this.state.selected,
+      selected: this.state.selected
     })
   }
 }
