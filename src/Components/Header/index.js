@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import noop from 'lodash/noop'
 import { Karbon } from '../../styles/core'
 import { Button } from '@react-core/button'
 import style from './style.scss'
@@ -64,7 +63,7 @@ const Header = ({ sections = [] }) => (
                                 theme={Karbon}
                                 label={'Whitepaper'}
                                 type={'secondary'}
-                                onClick={noop}
+                                onClick={DownloadWhitepaper}
                               />
                             </ul>
                           </div>
