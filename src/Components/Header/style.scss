@@ -34,6 +34,19 @@ header {
       border-right: 1px solid rgba(255, 255, 255, 0.1);
       padding-right: 15px;
 
+      .flex-area {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .container-dropdown{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 45px 0 0 15px;
+        }
+      }
+
       a {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -52,6 +65,11 @@ header {
           margin-bottom: 6px;
         }
       }
+    }
+    
+    .container-dropdown {
+      min-width: 65px;
+      margin-top: 40px;
     }
 
     .links__area {
