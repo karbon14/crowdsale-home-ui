@@ -4,20 +4,11 @@ import { Button } from '@react-core/button'
 import { Feature } from './Feature'
 import { Title } from '../../../../../Components/Title'
 import { Scroll } from '../../../../../Components/Header/Helpers'
+import { DownloadWhitepaper } from '../../../../../Components/Utils'
 import style from './style.scss'
 import blockchain from './Assets/features-blockchain.png'
 import token from './Assets/features-token.png'
 import integration from './Assets/features-integration.png'
-import { saveAs } from 'file-saver/FileSaver'
-
-const DownloadWhitepaper = async () => {
-  fetch(`${process.env.API_URL}/whitepaper`, {
-    method: 'GET',
-    headers: { 'Content-Type': 'application/pdf' }
-  })
-    .then(r => r.blob())
-    .then(b => saveAs(b, 'whitepaper_Karbon14.pdf'))
-}
 
 const Advantages = () => (
   <div className="advantages">
