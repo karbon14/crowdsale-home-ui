@@ -61,8 +61,8 @@ const Chart = ({ description, data = [], colors = [] }) => {
 
 Chart.propTypes = {
   description: PropTypes.string,
-  data: [],
-  colors: []
+  data: PropTypes.array,
+  colors: PropTypes.array
 }
 
 export { Chart }
