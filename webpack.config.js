@@ -38,16 +38,18 @@ const getPlugins = argv => {
   if (argv.mode === 'production') {
     plugins = [
       ...plugins,
-      new CopyWebpackPlugin([{
-        from: './_redirects',
-        to: './_redirects',
-        toType: 'file',
-      },
-      {
-        from: './_headers',
-        to: './_headers',
-        toType: 'file',
-      }])
+      new CopyWebpackPlugin([
+        {
+          from: './_redirects',
+          to: './_redirects',
+          toType: 'file'
+        },
+        {
+          from: './_headers',
+          to: './_headers',
+          toType: 'file'
+        }
+      ])
     ]
   }
 
@@ -71,7 +73,7 @@ module.exports = (env, argv) => ({
     },
     proxy: {
       '/api': {
-        target: 'http://localhost:3000',
+        target: 'http://localhost:80',
         pathRewrite: { '^/api': '' }
       }
     }

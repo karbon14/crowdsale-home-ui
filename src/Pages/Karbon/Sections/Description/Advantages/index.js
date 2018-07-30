@@ -8,16 +8,15 @@ import style from './style.scss'
 import blockchain from './Assets/features-blockchain.png'
 import token from './Assets/features-token.png'
 import integration from './Assets/features-integration.png'
+import { saveAs } from 'file-saver/FileSaver'
 
-const DownloadWhitepaper = ({ API_URL = process.env.API_URL }) => {
-  const downloadUrl = `${API_URL}/whitepaper`
-  const downloadFrame = document.createElement('iframe')
-  downloadFrame.setAttribute('src', downloadUrl)
-  downloadFrame.setAttribute('id', 'download-frame')
-  document.body.appendChild(downloadFrame)
-  setTimeout(() => {
-    document.getElementById('download-frame').remove()
-  }, 100)
+const DownloadWhitepaper = async () => {
+  fetch(`${process.env.API_URL}/whitepaper`, {
+    method: 'GET',
+    headers: { 'Content-Type': 'application/pdf' }
+  })
+    .then(r => r.blob())
+    .then(b => saveAs(b, 'whitepaper_Karbon14.pdf'))
 }
 
 const Advantages = () => (

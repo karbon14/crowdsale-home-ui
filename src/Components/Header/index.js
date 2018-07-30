@@ -7,16 +7,17 @@ import style from './style.scss'
 import logo from './Assets/K14-Logo.svg'
 import { Sticky, Scroll, Resize, MobileMenu } from './Helpers'
 import GithubCorner from 'react-github-corner'
+import { saveAs } from 'file-saver/FileSaver'
 
-const DownloadWhitepaper = ({ API_URL = process.env.API_URL }) => {
-  const downloadUrl = `${API_URL}/whitepaper`
-  const downloadFrame = document.createElement('iframe')
-  downloadFrame.setAttribute('src', downloadUrl)
-  downloadFrame.setAttribute('id', 'download-frame')
-  document.body.appendChild(downloadFrame)
-  setTimeout(() => {
-    document.getElementById('download-frame').remove()
-  }, 100)
+const DownloadWhitepaper = async () => {
+  fetch(`${process.env.API_URL}/whitepaper`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/pdf'
+    }
+  })
+    .then(r => r.blob())
+    .then(b => saveAs(b, 'whitepaper_Karbon14.pdf'))
 }
 
 const Header = ({ sections = [] }) => (
@@ -76,7 +77,7 @@ const Header = ({ sections = [] }) => (
                             onClick={isMobile ? onChange : DownloadWhitepaper}
                           />
 
-                          <div className={isMobile ? 'hide' : ''}> 
+                          <div className={isMobile ? 'hide' : ''}>
                             <GithubCorner
                               href="https://github.com/karbon14"
                               target="_blank"
