@@ -78,16 +78,11 @@
     "react-adopt": "0.6.0",
     "react-dom": "16.4.1",
     "react-github-corner": "2.3.0",
-    "react-powerplug": "0.1.6",
-    "react-redux": "5.0.7",
     "react-router-dom": "4.3.1",
     "recharts": "1.1.0",
-    "recompose": "0.27.1",
-    "redux": "4.0.0",
     "smoothscroll-polyfill": "0.4.3",
     "url-search-params-polyfill": "4.0.1",
     "whatwg-fetch": "2.0.4",
-    "yum": "0.1.1",
-    "yup": "0.25.1"
+    "yup": "0.26.0"
   }
 }
