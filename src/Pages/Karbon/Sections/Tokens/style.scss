@@ -18,6 +18,7 @@
       width: 50%;
       height: 240px;
       display: flex;
+      margin-top: 15px;
       margin-bottom: 30px;
       
       .info {
@@ -58,12 +59,20 @@
           font-weight: 300;
         }
       }
+
+      .buy {
+        margin-top: 20px;
+      }
     }
 
     .distribution {
       display: flex;
       align-items: center;
       margin-bottom: 30px;
+    }
+
+    .buyMobile {
+      display: none;
     }
   }
 }
@@ -93,14 +102,7 @@
 
       .sale {
         width: 100%;
-        margin-bottom: 30px;
-        
-      }
-
-      .timer {
-        display: flex;
-        align-items: center;
-        margin-bottom: 30px;
+        margin-bottom: 60px;
       }
 
       .distribution {
@@ -122,12 +124,22 @@
       .sale {
         height: initial;
         flex-direction: column;
+        margin-bottom: 0;
       
         .info {
           &-section {
             width: 100%;
           }
         }
+      
+        .buy {
+          display: none;
+        }
+      }
+
+      .buyMobile {
+        display: initial;
+        margin-bottom: 60px;
       }
     }
   }

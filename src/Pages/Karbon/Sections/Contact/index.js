@@ -30,6 +30,7 @@ const Contact = () => (
         <div className="container">
           <div className="left">
             <div className="section">
+              <div className="subscribe"> </div>
               <Media
                 links={[
                   {
