@@ -7,6 +7,10 @@ const translation = {
     faq: 'Preguntas',
     contact: 'Contacto',
     suscribe: 'Suscribirse'
+  },
+  intro: {
+    title: 'Título  <br /> para <br /> ES lang',
+    subtitle: 'Subtítulo para ES lang'
   }
 }
 

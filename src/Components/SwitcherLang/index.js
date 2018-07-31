@@ -2,6 +2,7 @@ import React from 'react'
 import get from 'lodash/get'
 import PropTypes from 'prop-types'
 import Component from '@reactions/component'
+import ReactHtmlParser from 'react-html-parser'
 import { Dropdown } from './Dropdown'
 import { Langs } from './Translations'
 
@@ -29,7 +30,10 @@ const LanguageProvider = ({ children }) => (
                 selectedTanslation: translation
               })
             },
-            getTranslation: key => get(state.selectedTanslation, [key], '')
+            getTranslation: key => {
+              const translation = get(state.selectedTanslation, key, '')
+              return ReactHtmlParser(translation)
+            }
           }}
         >
           {children}
@@ -77,4 +81,4 @@ SwitcherLang.propTypes = {
   defaultLang: PropTypes.string
 }
 
-export { LanguageProvider, SwitcherLang }
+export { LanguageProvider, LanguageContext, SwitcherLang }
