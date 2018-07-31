@@ -1,25 +1,80 @@
 import React from 'react'
-import { Dropdown } from '../Dropdown/Dropdown'
+import get from 'lodash/get'
 import PropTypes from 'prop-types'
-import { Switching } from '../../RenderProps/Switching'
+import Component from '@reactions/component'
+import { Dropdown } from './Dropdown'
+import { Langs } from './Translations'
 
-export const SwitcherLang = ({ langs, defaultLang }) => (
-  <Switching initialState={{ selected: defaultLang }}>
-    {({ onToggling, onSwitching, isOpen, selected }) => {
+const LanguageContext = React.createContext({})
+
+const LanguageProvider = ({ children }) => (
+  <Component
+    initialState={{
+      langs: [],
+      selectedLanguage: '',
+      selectedTanslation: {}
+    }}
+    render={({ state, setState }) => {
       return (
-        <Dropdown
-          onToggling={onToggling}
-          onSelect={onSwitching}
-          selected={selected}
-          isOpen={isOpen}
-          data={langs}
-        />
+        <LanguageContext.Provider
+          value={{
+            ...state,
+            registerTranslations: langs => {
+              setState({ langs })
+            },
+            toggleSelected: (selectedLanguage = {}) => {
+              const { key, translation } = selectedLanguage
+              setState({
+                selectedLanguage: key,
+                selectedTanslation: translation
+              })
+            },
+            getTranslation: key => get(state.selectedTanslation, [key], '')
+          }}
+        >
+          {children}
+        </LanguageContext.Provider>
       )
     }}
-  </Switching>
+  />
 )
 
-Dropdown.propTypes = {
+LanguageProvider.propTypes = {
+  children: PropTypes.node
+}
+
+const SwitcherLang = () => (
+  <LanguageContext.Consumer>
+    {context => (
+      <Component
+        initialState={{
+          isOpen: false
+        }}
+        didMount={() => {
+          context.registerTranslations(Langs)
+          context.toggleSelected(Langs[0])
+        }}
+        render={({ state, setState }) => (
+          <Dropdown
+            onToggling={() => setState({ isOpen: !state.isOpen })}
+            onSelect={s => {
+              const selected = Langs.find(l => l.key === s)
+              context.toggleSelected(selected)
+              setState({ isOpen: false })
+            }}
+            data={context.langs}
+            selected={context.selectedLanguage}
+            isOpen={state.isOpen}
+          />
+        )}
+      />
+    )}
+  </LanguageContext.Consumer>
+)
+
+SwitcherLang.propTypes = {
   langs: PropTypes.array,
   defaultLang: PropTypes.string
 }
+
+export { LanguageProvider, SwitcherLang }

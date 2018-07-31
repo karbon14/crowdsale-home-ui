@@ -1,4 +1,10 @@
 .dropdown {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 32px;
 
   .show {
     .dropdown-list {

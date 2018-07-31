@@ -34,10 +34,7 @@ const Header = ({ sections = [] }) => (
                               />
                             </a>
                             <div className="container-dropdown">
-                              <SwitcherLang
-                                langs={langs}
-                                defaultLang={defaultLang}
-                              />
+                              <SwitcherLang />
                             </div>
                           </div>
                         </div>
