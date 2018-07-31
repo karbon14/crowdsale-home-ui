@@ -3,7 +3,7 @@ import style from './style.scss'
 
 const Disclaimer = () => (
   <div>
-    <p>Copyright © 2018, Karbon14 by Southteam.</p>
+    <p>Copyright © 2018, Karbon14.</p>
     <style jsx>{style}</style>
   </div>
 )
