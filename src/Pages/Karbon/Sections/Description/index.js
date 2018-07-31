@@ -18,7 +18,8 @@ const Description = () => (
             </h1>
 
             <p className="lead">
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat<br />
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat
+              <br />
               duis aute irure dolor in
             </p>
 
