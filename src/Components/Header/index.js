@@ -1,14 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import noop from 'lodash/noop'
 import { Karbon } from '../../styles/core'
 import { Button } from '@react-core/button'
+import { DownloadWhitepaper } from '../Utils'
 import style from './style.scss'
 import logo from './Assets/K14-Logo.svg'
 import { Sticky, Scroll, Resize, MobileMenu } from './Helpers'
-
-const DownloadWhitepaper = ({ API_URL = process.env.API_URL }) =>
-  window.open(`${API_URL}/whitepaper`)
+import GithubCorner from 'react-github-corner'
 
 const Header = ({ sections = [] }) => (
   <MobileMenu
@@ -54,7 +52,7 @@ const Header = ({ sections = [] }) => (
                                 theme={Karbon}
                                 label={'Whitepaper'}
                                 type={'secondary'}
-                                onClick={noop}
+                                onClick={DownloadWhitepaper}
                               />
                             </ul>
                           </div>
@@ -66,6 +64,14 @@ const Header = ({ sections = [] }) => (
                             icon={isMobile ? 'fa-bars menu' : ''}
                             onClick={isMobile ? onChange : DownloadWhitepaper}
                           />
+
+                          <div className={isMobile ? 'hide' : ''}>
+                            <GithubCorner
+                              href="https://github.com/karbon14"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            />
+                          </div>
                         </div>
                       </div>
                     </header>

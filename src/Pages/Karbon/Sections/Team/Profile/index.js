@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import style from './Profile.scss'
 
-const Profile = ({ photo, name, surname }) => (
+const Profile = ({ photo, name, surname, facebook, linkedin, twitter }) => (
   <div className="team-member">
     <div className="team-photo">
       <img src={photo} alt="team" />
@@ -16,17 +16,17 @@ const Profile = ({ photo, name, surname }) => (
       <span className="team-title"> </span>
       <ul className="team-social">
         <li>
-          <a href="">
+          <a href={facebook} target="_blank" rel="noopener noreferrer">
             <em className="fa fa-facebook" />
           </a>
         </li>
         <li>
-          <a href="">
+          <a href={linkedin} target="_blank" rel="noopener noreferrer">
             <em className="fa fa-linkedin" />
           </a>
         </li>
         <li>
-          <a href="">
+          <a href={twitter} target="_blank" rel="noopener noreferrer">
             <em className="fa fa-twitter" />
           </a>
         </li>
@@ -39,13 +39,19 @@ const Profile = ({ photo, name, surname }) => (
 Profile.propTypes = {
   photo: PropTypes.any,
   name: PropTypes.string,
-  surname: PropTypes.string
+  surname: PropTypes.string,
+  facebook: PropTypes.string,
+  twitter: PropTypes.string,
+  linkedin: PropTypes.string
 }
 
 Profile.defaultProps = {
   photo: '',
   name: '',
-  surname: ''
+  surname: '',
+  facebook: '',
+  twitter: '',
+  linkedin: ''
 }
 
 export { Profile }

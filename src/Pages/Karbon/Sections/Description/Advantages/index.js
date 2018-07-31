@@ -4,13 +4,11 @@ import { Button } from '@react-core/button'
 import { Feature } from './Feature'
 import { Title } from '../../../../../Components/Title'
 import { Scroll } from '../../../../../Components/Header/Helpers'
+import { DownloadWhitepaper } from '../../../../../Components/Utils'
 import style from './style.scss'
 import blockchain from './Assets/features-blockchain.png'
 import token from './Assets/features-token.png'
 import integration from './Assets/features-integration.png'
-
-const DownloadWhitepaper = ({ API_URL = process.env.API_URL }) =>
-  window.open(`${API_URL}/whitepaper`)
 
 const Advantages = () => (
   <div className="advantages">

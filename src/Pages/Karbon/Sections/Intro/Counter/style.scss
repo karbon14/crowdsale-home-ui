@@ -69,3 +69,45 @@
     }
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .counter {
+    padding: 20px 0;
+
+    .time {
+      .unit {
+        span.number {
+          font-size: 32px;
+          padding-right: 15px;
+          text-align: center;
+
+          :not(.last):after {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .counter {
+    .time {
+      .unit {
+        min-width: 75px;
+
+        span.number {
+          font-size: 25px;
+          padding-right: 0px;
+          text-align: center;
+          padding-left: 0px;
+
+          :not(.last):after {
+            font-size: 20px;
+            right: -5px;
+          }
+        }
+      }
+    }
+  }
+}

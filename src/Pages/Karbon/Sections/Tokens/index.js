@@ -1,8 +1,23 @@
 import React from 'react'
 import style from './style.scss'
-import { Counter } from './Counter'
 import { Chart } from './Chart'
+import { Karbon } from '../../../../styles/core'
+import { Button } from '@react-core/button'
 import { Title } from '../../../../Components/Title'
+import { Scroll } from '../../../../Components/Header/Helpers'
+
+const BuyButton = () => (
+  <Scroll
+    headerHeight={80}
+    render={({ onGoToSection }) => (
+      <Button
+        theme={Karbon}
+        label={'Buy your tokens now'}
+        onClick={() => onGoToSection('tokens')}
+      />
+    )}
+  />
+)
 
 const Tokens = () => (
   <div className="tokens">
@@ -28,6 +43,8 @@ const Tokens = () => (
             <h6>Facilis est et expedita distinct</h6>
             <p>Eeveniet ut et voluptates</p>
           </div>
+
+          <div className="buy">{BuyButton()}</div>
         </div>
 
         <div className="info-section">
@@ -46,15 +63,9 @@ const Tokens = () => (
         </div>
       </div>
 
-      <div className="timer">
-        <Counter to="2018 07 15" />
-      </div>
-    </div>
-
-    <div className="container">
       <div className="distribution">
         <Chart
-          description="Et harum quidem rerum facilis"
+          description="Token distribution"
           data={[
             { name: 'Itsum', data: 30 },
             { name: 'Consectetur', data: 10 },
@@ -64,18 +75,9 @@ const Tokens = () => (
           ]}
           colors={['#00f9a5', '#e55457', '#16a4fd', '#855af4', '#e5c154']}
         />
-        <Chart
-          description="Nam libero tempore, cum soluta"
-          data={[
-            { name: 'Lorem', data: 10 },
-            { name: 'Dolor', data: 10 },
-            { name: 'Sit amet', data: 15 },
-            { name: 'Itsum', data: 5 },
-            { name: 'Consectetur', data: 60 }
-          ]}
-          colors={['#2bd8ca', '#34e4bc', '#34e4bc', '#2bd8ca', '#25c5d7']}
-        />
       </div>
+
+      <div className="buyMobile">{BuyButton()}</div>
     </div>
     <style jsx>{style}</style>
   </div>

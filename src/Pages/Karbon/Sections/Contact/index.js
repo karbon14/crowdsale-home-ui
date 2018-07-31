@@ -30,14 +30,30 @@ const Contact = () => (
         <div className="container">
           <div className="left">
             <div className="section">
+              <div className="subscribe"> </div>
               <Media
                 links={[
-                  { name: 'Facebook', url: '#', icon: 'fa-facebook' },
-                  { name: 'Twitter', url: '#', icon: 'fa-twitter' },
-                  { name: 'Youtube', url: '#', icon: 'fa-youtube' },
-                  { name: 'GitHub', url: '#', icon: 'fa-github' },
-                  { name: 'Bitcoin', url: '#', icon: 'fa-bitcoin' },
-                  { name: 'Medium', url: '#', icon: 'fa-medium' }
+                  {
+                    name: 'Facebook',
+                    url: 'https://www.facebook.com/karbon.crypto.9',
+                    icon: 'fa-facebook'
+                  },
+                  {
+                    name: 'Twitter',
+                    url: 'https://twitter.com/K14crypto',
+                    icon: 'fa-twitter'
+                  },
+                  {
+                    name: 'GitHub',
+                    url: 'https://github.com/karbon14',
+                    icon: 'fa-github'
+                  },
+                  // { name: 'Bitcoin', url: '#', icon: 'fa-bitcoin' },
+                  {
+                    name: 'Medium',
+                    url: 'https://medium.com/@karbon14',
+                    icon: 'fa-medium'
+                  }
                 ]}
               />
             </div>

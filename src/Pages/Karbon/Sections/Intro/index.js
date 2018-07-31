@@ -1,11 +1,8 @@
 import React from 'react'
 import 'particles.js/particles'
 import style from './style.scss'
-import intro from './Assets/intro.png'
-import { Karbon } from '../../../../styles/core'
-import { Button } from '@react-core/button'
 import { Particles } from './Helpers'
-import { Scroll } from '../../../../Components/Header/Helpers'
+import { Counter } from './Counter'
 import './Assets/overlay.png'
 import './Assets/azure.png'
 
@@ -29,24 +26,11 @@ const Intro = () => (
                   Eiusmod tempor incididunt ut labore et <br /> dolore magna
                   aliqua.
                 </p>
-
-                <Scroll
-                  headerHeight={80}
-                  render={({ onGoToSection }) => (
-                    <Button
-                      theme={Karbon}
-                      label={'Token distribution'}
-                      onClick={() => onGoToSection('tokens')}
-                    />
-                  )}
-                />
               </div>
             </div>
 
             <div className="content-right">
-              <div>
-                <img src={intro} />
-              </div>
+              <Counter to="2018 12 15" />
             </div>
           </div>
         </div>

@@ -58,6 +58,10 @@ header {
       display: flex;
       align-items: center;
 
+      .hide {
+        display: none !important;
+      }
+
       ul {
         display: flex;
         margin-right: 15px;

@@ -16,7 +16,14 @@ const Team = () => (
       />
 
       <div className="members">
-        <Profile photo={MemberIMG} name={'Natanael'} surname={'Zalazar'} />
+        <Profile
+          photo={MemberIMG}
+          name={'Natanael'}
+          surname={'Zalazar'}
+          facebook={'https://www.facebook.com/zalazarnatanael'}
+          twitter={'https://twitter.com/zalazarnatanael'}
+          linkedin={'www.linkedin.com/in/zalazarnatanael'}
+        />
       </div>
     </div>
     <style jsx>{style}</style>
