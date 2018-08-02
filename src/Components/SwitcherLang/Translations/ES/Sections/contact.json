@@ -1,0 +1,17 @@
+{
+  "section":"CONTACTO",
+  "title":"Contactate con nosotros",
+  "anyQuestions":"Tenes preguntas? Envianoslas sin compromiso, y te responderemos a la brevedad.",
+  "joinUs":"Únetenos en Telegram",
+  "yourName":"Tu Nombre",
+  "yourEmail":"Tu Email",
+  "yourMessage":"Tu Mensaje",
+  "enterYourName":"Ingresa tu nombre",
+  "enterYourEmail":"Ingresa tu email",
+  "enterYourMessage":"Ingresa tu mensaje",
+  "subscribe":"Suscríbete a nuestro newsleter",
+  "enterEmail":"Ingresá tu email",
+  "submit":"Enviar",
+  "contactedOK":"Mensaje de contacto enviado exitosamente!",
+  "subscribedOK":"Suscrito exitosamente!"
+}
