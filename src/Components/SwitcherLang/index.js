@@ -30,9 +30,9 @@ const LanguageProvider = ({ children }) => (
                 selectedTanslation: translation
               })
             },
-            getTranslation: key => {
+            getTranslation: (key, parse = false) => {
               const translation = get(state.selectedTanslation, key, '')
-              return ReactHtmlParser(translation)
+              return parse ? ReactHtmlParser(translation) : translation
             }
           }}
         >

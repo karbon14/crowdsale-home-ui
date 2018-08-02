@@ -16,13 +16,13 @@ const Intro = ({ getTranslation }) => (
           <div className="banner-content">
             <div className="content-left">
               <div>
-                <h1>{getTranslation('intro.title')}</h1>
+                <h1>{getTranslation('intro.title', true)}</h1>
                 <p>{getTranslation('intro.subtitle')}</p>
               </div>
             </div>
 
             <div className="content-right">
-              <Counter to="2018 12 15" />
+              <Counter to="2018 12 15" getTranslation={getTranslation} />
             </div>
           </div>
         </div>

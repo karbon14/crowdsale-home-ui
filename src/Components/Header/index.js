@@ -56,7 +56,7 @@ const Header = ({ sections = [], getTranslation }) => (
 
                               <Button
                                 theme={Karbon}
-                                label={'Whitepaper'}
+                                label={getTranslation('header.whitepaper')}
                                 type={'secondary'}
                                 onClick={DownloadWhitepaper}
                               />
@@ -65,7 +65,11 @@ const Header = ({ sections = [], getTranslation }) => (
 
                           <Button
                             theme={Karbon}
-                            label={isMobile ? '' : 'Whitepaper'}
+                            label={
+                              isMobile
+                                ? ''
+                                : getTranslation('header.whitepaper')
+                            }
                             type={isMobile ? 'primary menu' : 'secondary'}
                             icon={isMobile ? 'fa-bars menu' : ''}
                             onClick={isMobile ? onChange : DownloadWhitepaper}

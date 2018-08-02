@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import style from './style.scss'
 import { Scroll } from '../../../../../../Components/Header/Helpers'
 
-const Sections = ({ sections }) => (
+const Sections = ({ sections, getTranslation }) => (
   <ul>
     {sections.map((section, index) => (
       <Scroll
@@ -11,7 +11,9 @@ const Sections = ({ sections }) => (
         headerHeight={80}
         render={({ onGoToSection }) => (
           <li>
-            <a onClick={() => onGoToSection(section)}>{section}</a>
+            <a onClick={() => onGoToSection(section)}>
+              {getTranslation(`header.${section}`)}
+            </a>
           </li>
         )}
       />
@@ -21,7 +23,8 @@ const Sections = ({ sections }) => (
 )
 
 Sections.propTypes = {
-  sections: PropTypes.array
+  sections: PropTypes.array,
+  getTranslation: PropTypes.func
 }
 
 export { Sections }

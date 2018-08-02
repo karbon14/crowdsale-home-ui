@@ -29,12 +29,12 @@ const Karbon = () => (
           ]}
         />
         <Intro getTranslation={getTranslation} />
-        <Description />
-        <Tokens />
-        <Apps />
-        <Team />
-        <Faq />
-        <Contact />
+        <Description getTranslation={getTranslation} />
+        <Tokens getTranslation={getTranslation} />
+        <Apps getTranslation={getTranslation} />
+        <Team getTranslation={getTranslation} />
+        <Faq getTranslation={getTranslation} />
+        <Contact getTranslation={getTranslation} />
         <style jsx>{style}</style>
       </div>
     )}
