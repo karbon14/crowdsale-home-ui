@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import style from './style.scss'
 import { Title } from '../../../../Components/Title'
 import {
@@ -11,17 +12,20 @@ import {
 } from './Contents'
 import './Assets/footer.png'
 
-const Contact = () => (
+const Contact = ({ getTranslation }) => (
   <div className="contact">
-    <Title section="Contact" title="Get In Touch" />
+    <Title
+      section={getTranslation('contact.section')}
+      title={getTranslation('contact.title')}
+    />
 
     <div className="info">
       <div className="left">
-        <Questions />
+        <Questions getTranslation={getTranslation} />
       </div>
 
       <div className="right">
-        <Form />
+        <Form getTranslation={getTranslation} />
       </div>
     </div>
 
@@ -48,7 +52,6 @@ const Contact = () => (
                     url: 'https://github.com/karbon14',
                     icon: 'fa-github'
                   },
-                  // { name: 'Bitcoin', url: '#', icon: 'fa-bitcoin' },
                   {
                     name: 'Medium',
                     url: 'https://medium.com/@karbon14',
@@ -59,12 +62,13 @@ const Contact = () => (
             </div>
 
             <div className="section">
-              <Suscribe />
+              <Suscribe getTranslation={getTranslation} />
             </div>
           </div>
 
           <div className="right">
             <Sections
+              getTranslation={getTranslation}
               sections={[
                 'description',
                 'tokens',
@@ -83,5 +87,9 @@ const Contact = () => (
     <style jsx>{style}</style>
   </div>
 )
+
+Contact.propTypes = {
+  getTranslation: PropTypes.func
+}
 
 export { Contact }

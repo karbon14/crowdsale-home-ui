@@ -1,9 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import * as yup from 'yup'
 import { Formik } from 'formik'
 import style from './style.scss'
 
-const suscribeOperation = async (values, api) => {
+const suscribeOperation = async (values, api, getTranslation) => {
   try {
     const res = await fetch(`${process.env.API_URL}/subscribe`, {
       method: 'POST',
@@ -15,7 +16,7 @@ const suscribeOperation = async (values, api) => {
 
     if (res.status === 200) {
       api.resetForm()
-      alert('Suscription successfully!')
+      alert(getTranslation('contact.contactedOK'))
     } else throw res
   } catch (e) {
     const error = await e.text()
@@ -30,15 +31,17 @@ const validationSchema = yup.object().shape({
     .required('Please add an email address')
 })
 
-const Suscribe = () => (
+const Suscribe = ({ getTranslation }) => (
   <div className="container">
-    <h6>Subscribe to our newsleter</h6>
+    <h6>{getTranslation('contact.subscribe')}</h6>
 
     <div className="suscribe-container">
       <Formik
         validateOnChange
         validateOnSubmit
-        onSubmit={(values, api) => suscribeOperation(values, api)}
+        onSubmit={(values, api) =>
+          suscribeOperation(values, api, getTranslation)
+        }
         enableReinitialize
         initialValues={{ email: '' }}
         validationSchema={validationSchema}
@@ -47,7 +50,7 @@ const Suscribe = () => (
             <input
               type="email"
               name="email"
-              placeholder="Enter your email"
+              placeholder={getTranslation('contact.enterEmail')}
               className="suscribe-input"
               value={api.values.email}
               onChange={api.handleChange}
@@ -60,7 +63,7 @@ const Suscribe = () => (
               className="suscribe-button"
               onClick={api.submitForm}
             >
-              Submit
+              {getTranslation('contact.submit')}
             </button>
           </form>
         )}
@@ -69,5 +72,9 @@ const Suscribe = () => (
     <style jsx>{style}</style>
   </div>
 )
+
+Suscribe.propTypes = {
+  getTranslation: PropTypes.func
+}
 
 export { Suscribe }

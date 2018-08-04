@@ -1,33 +1,29 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import style from './style.scss'
 import app from './Assets/mobile-app.png'
 import { Title } from '../../../../Components/Title'
 
-const Apps = () => (
+const Apps = ({ getTranslation }) => (
   <div className="apps">
     <Title
-      section="Apps"
-      title="Karbon14 Mobile App"
-      description="Hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+      section={getTranslation('apps.section')}
+      title={getTranslation('apps.title')}
+      description={getTranslation('apps.description')}
     />
 
     <div className="container">
       <div className="description">
         <div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exerc itation ullamco laboris nisi
-            commodo consequat.
-          </p>
+          <p>{getTranslation('apps.paragraph1')}</p>
 
           <ul>
-            <li>Et harum quidem rerum</li>
-            <li>At vero eos et accusamus et</li>
-            <li>Ut aut reiciendis voluptatibus</li>
-            <li>Nam libero tempore, cum soluta</li>
-            <li>Sed ut perspiciatis unde omnis iste</li>
-            <li>Alias consequatur aut perferendis doloribus</li>
+            <li>{getTranslation('apps.info1')}</li>
+            <li>{getTranslation('apps.info2')}</li>
+            <li>{getTranslation('apps.info3')}</li>
+            <li>{getTranslation('apps.info4')}</li>
+            <li>{getTranslation('apps.info5')}</li>
+            <li>{getTranslation('apps.info6')}</li>
           </ul>
         </div>
       </div>
@@ -40,5 +36,9 @@ const Apps = () => (
     <style jsx>{style}</style>
   </div>
 )
+
+Apps.propTypes = {
+  getTranslation: PropTypes.func
+}
 
 export { Apps }
