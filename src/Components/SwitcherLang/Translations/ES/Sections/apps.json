@@ -1,12 +1,12 @@
 {
   "section":"APLICACIONES",
-  "title":"App Mobile Karbon14",
-  "description":"ES: Hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
-  "paragraph1":"ES: Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc itation ullamco laboris nisi commodo consequat.",
-  "info1":"Información 1",
-  "info2":"Información 2",
-  "info3":"Información 3",
-  "info4":"Información 4",
-  "info5":"Información 5",
-  "info6":"Información 6"
+  "title":"Karbon14 multiplataforma",
+  "description":"Karbon14 creará aplicativos multiplataforma para que los usuarios puedan gestionar sus certificados de pruebas de vida, visualizarlos o crear una nueva de prueba de vida.",
+  "preparagraph1": "Protocolo Karbon14",
+  "paragraph1":"Karbon14 creará un protocolo de validación de los hashes para autenticar los certificados de vida. Asi como tambien se crearán diversas herramientas que usarán el protocolo para permitir así la validación desde distintas plataformas:",
+  "info1":"Wallet Karbon14",
+  "info2":"Validador de hashes",
+  "info3":"Aplicación multiplataforma de escritorio",
+  "info4":"Aplicación multiplataforma mobile",
+  "info5":"SDK para aplicaciones de terceros"
 }

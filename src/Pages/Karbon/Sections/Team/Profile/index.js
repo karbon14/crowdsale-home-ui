@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import style from './Profile.scss'
+import style from './style.scss'
 
 const Profile = ({
   photo,
@@ -9,7 +9,9 @@ const Profile = ({
   facebook,
   linkedin,
   twitter,
-  github
+  github,
+  charge,
+  tech
 }) => (
   <div className="team-member">
     <div className="team-photo">
@@ -21,6 +23,11 @@ const Profile = ({
         {surname} <br />
         {name}
       </h5>
+      <h6 className="team-position">
+        {charge} <br />
+        {tech}
+      </h6>
+
       <span className="team-title"> </span>
       <ul className="team-social">
         {facebook ? (
@@ -64,7 +71,9 @@ Profile.propTypes = {
   facebook: PropTypes.string,
   twitter: PropTypes.string,
   linkedin: PropTypes.string,
-  github: PropTypes.string
+  github: PropTypes.string,
+  charge: PropTypes.string,
+  tech: PropTypes.string
 }
 
 Profile.defaultProps = {

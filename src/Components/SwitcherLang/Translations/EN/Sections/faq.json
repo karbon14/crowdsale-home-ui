@@ -1,5 +1,5 @@
 {
-  "section": "FAQS",
+  "section": "FAQ",
   "title": "Frequently Asked Questions",
   "description": "EN: At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.",
   "tab1Name": "GENERAL",
@@ -29,22 +29,12 @@
   "tab3Description3": "EN: Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est",
   "tab3Title4": "EN: At vero eos et accusamus et iusto odio",
   "tab3Description4": "EN: Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est",
-  "tab4Name": "CLIENT",
+  "tab4Name": "LEGALS",
   "tab4Title1": "EN: At vero eos et accusamus et iusto odio",
   "tab4Description1": "EN: Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est",
   "tab4Title2": "EN: At vero eos et accusamus et iusto odio",
   "tab4Description2": "EN: Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est",
   "tab4Title3": "EN: At vero eos et accusamus et iusto odio",
   "tab4Description3": "EN: Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est",
-  "tab4Title4": "EN: At vero eos et accusamus et iusto odio",
-  "tab4Description4": "EN: Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est",
-  "tab5Name": "LEGAL",
-  "tab5Title1": "EN: At vero eos et accusamus et iusto odio",
-  "tab5Description1": "EN: Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est",
-  "tab5Title2": "EN: At vero eos et accusamus et iusto odio",
-  "tab5Description2": "EN: Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est",
-  "tab5Title3": "EN: At vero eos et accusamus et iusto odio",
-  "tab5Description3": "EN: Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est",
-  "tab5Title4": "EN: At vero eos et accusamus et iusto odio",
-  "tab5Description4": "EN: Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
+  "tab4Title4": "EN: At vero eos et accusamus et iusto odio"
 }

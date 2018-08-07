@@ -17,7 +17,7 @@ const Intro = ({ getTranslation }) => (
             <div className="content-left">
               <div>
                 <h1>{getTranslation('intro.title', true)}</h1>
-                <p>{getTranslation('intro.subtitle')}</p>
+                <p>{getTranslation('intro.subtitle', true)}</p>
               </div>
             </div>
 

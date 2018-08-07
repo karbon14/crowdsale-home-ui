@@ -68,13 +68,13 @@ const Tokens = ({ getTranslation }) => (
         <Chart
           description={getTranslation('tokens.distribution')}
           data={[
-            { name: getTranslation('tokens.graphKey1'), data: 30 },
-            { name: getTranslation('tokens.graphKey2'), data: 10 },
-            { name: getTranslation('tokens.graphKey3'), data: 10 },
-            { name: getTranslation('tokens.graphKey4'), data: 30 },
-            { name: getTranslation('tokens.graphKey5'), data: 20 }
+            { name: getTranslation('tokens.graphKey3'), data: 3 },
+            { name: getTranslation('tokens.graphKey2'), data: 50 },
+            { name: getTranslation('tokens.graphKey1'), data: 10 },
+            { name: getTranslation('tokens.graphKey4'), data: 7 },
+            { name: getTranslation('tokens.graphKey5'), data: 30 }
           ]}
-          colors={['#00f9a5', '#e55457', '#16a4fd', '#855af4', '#e5c154']}
+          colors={['#e55457', '#00f9a5', '#16a4fd', '#855af4', '#e5c154']}
         />
       </div>
 
