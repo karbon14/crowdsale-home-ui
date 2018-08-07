@@ -122,38 +122,6 @@ const Faq = ({ getTranslation }) => (
                     title={getTranslation('faq.tab4Title3')}
                     description={getTranslation('faq.tab4Description3')}
                   />
-                  <TitleDescription
-                    title={getTranslation('faq.tab4Title4')}
-                    description={getTranslation('faq.tab4Description4')}
-                  />
-                </div>
-              </div>
-            )
-          },
-          {
-            name: getTranslation('faq.tab5Name'),
-            content: (
-              <div className="contents">
-                <div className="content-section">
-                  <TitleDescription
-                    title={getTranslation('faq.tab5Title1')}
-                    description={getTranslation('faq.tab5Description1')}
-                  />
-                  <TitleDescription
-                    title={getTranslation('faq.tab5Title2')}
-                    description={getTranslation('faq.tab5Description2')}
-                  />
-                </div>
-
-                <div className="content-section">
-                  <TitleDescription
-                    title={getTranslation('faq.tab5Title3')}
-                    description={getTranslation('faq.tab5Description3')}
-                  />
-                  <TitleDescription
-                    title={getTranslation('faq.tab5Title4')}
-                    description={getTranslation('faq.tab5Description4')}
-                  />
                 </div>
               </div>
             )

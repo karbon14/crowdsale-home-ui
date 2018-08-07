@@ -15,6 +15,7 @@ const Apps = ({ getTranslation }) => (
     <div className="container">
       <div className="description">
         <div>
+          <h1>{getTranslation('apps.preparagraph1')}</h1>
           <p>{getTranslation('apps.paragraph1')}</p>
 
           <ul>
@@ -23,7 +24,6 @@ const Apps = ({ getTranslation }) => (
             <li>{getTranslation('apps.info3')}</li>
             <li>{getTranslation('apps.info4')}</li>
             <li>{getTranslation('apps.info5')}</li>
-            <li>{getTranslation('apps.info6')}</li>
           </ul>
         </div>
       </div>

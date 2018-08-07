@@ -23,6 +23,13 @@
       flex-shrink: 1;
       align-items: center;
 
+      h1 {
+        color: #1641b5;
+        line-height: 1.33;
+        font-weight: 600;
+        margin: 0 0 18px;
+        font-size: 1.93em;
+      }
 
       p {
         color: #637097;
@@ -116,6 +123,10 @@
 
       .description {
         width: 100%;
+
+        h1 {
+          font-size: 1.07em;
+        }
       }
 
       .phone {

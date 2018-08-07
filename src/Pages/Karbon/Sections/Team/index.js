@@ -26,16 +26,26 @@ const Team = ({ getTranslation }) => (
           twitter="https://twitter.com/zalazarnatanael"
           linkedin="www.linkedin.com/in/zalazarnatanael"
           github="https://github.com/zalazarnatanael"
+          charge="CO-FOUNDER"
+          tech="Senior Full-stack"
         />
+
         <Profile
           photo={Anonymous}
-          name="Wolverine"
+          name="(Secret Dev)"
+          surname="Wolverine"
           github="https://github.com/wolverinek14"
+          charge="CO-FOUNDER"
+          tech="Blockchain Evangelist"
         />
+
         <Profile
           photo={Anonymous}
-          name="Vision"
+          name="(Secret Dev)"
+          surname="Vision"
           github="https://github.com/visionk14"
+          charge="CO-FOUNDER"
+          tech="Senior Full-stack"
         />
       </div>
     </div>
