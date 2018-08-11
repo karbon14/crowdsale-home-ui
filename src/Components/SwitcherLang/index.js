@@ -56,7 +56,7 @@ const SwitcherLang = () => (
         }}
         didMount={() => {
           context.registerTranslations(Langs)
-          context.toggleSelected(Langs[1])
+          context.toggleSelected(Langs[0])
         }}
         render={({ state, setState }) => (
           <Dropdown
