@@ -1,40 +1,24 @@
 import React from 'react'
 import style from './style.scss'
+import PropTypes from 'prop-types'
 import graph from './Assets/graph.png'
 import { Advantages } from './Advantages'
 
-const Description = () => (
+const Description = ({ getTranslation }) => (
   <div className="description">
     <div className="container">
       <div className="banner-content">
         <div className="content-left">
           <div>
-            <h2>Karbon14</h2>
-
-            <h1>
-              Ut enim ad minim veniam,
-              <br />
-              quis nostrud exercitation.
-            </h1>
+            <h2>{getTranslation('description.karbon')}</h2>
+            <h1>{getTranslation('description.title', true)}</h1>
 
             <p className="lead">
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat
-              <br />
-              duis aute irure dolor in
+              {getTranslation('description.subtitle', true)}
             </p>
 
-            <p>
-              Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-              occaecat cupidatat non proident, sunt in culpa qui officia
-              deserunt mollit anim id est laborum.
-            </p>
-
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo.
-            </p>
+            <p>{getTranslation('description.paragraph1')}</p>
+            <p>{getTranslation('description.paragraph2')}</p>
           </div>
         </div>
 
@@ -46,9 +30,13 @@ const Description = () => (
       </div>
     </div>
 
-    <Advantages />
+    <Advantages getTranslation={getTranslation} />
     <style jsx>{style}</style>
   </div>
 )
+
+Description.propTypes = {
+  getTranslation: PropTypes.func
+}
 
 export { Description }

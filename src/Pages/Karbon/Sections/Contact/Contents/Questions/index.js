@@ -1,16 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import style from './style.scss'
 
-const Questions = () => (
+const Questions = ({ getTranslation }) => (
   <div className="container">
-    <p>Any question? Reach out to us and we’ll get back to you shortly.</p>
+    <p>{getTranslation('contact.anyQuestions')}</p>
 
     <div className="channels">
       <ul>
-        {/* <li>
-          <em className="fa fa-phone" />
-          <span>+44 0123 4567</span>
-        </li> */}
         <li>
           <em className="fa fa-envelope" />
           <span>team@karbon14.org</span>
@@ -23,7 +20,7 @@ const Questions = () => (
             rel="noopener noreferrer"
           >
             <em className="fa fa-paper-plane" />
-            <span>Join us on Telegram</span>
+            <span>{getTranslation('contact.joinUs')}</span>
           </a>
         </li>
       </ul>
@@ -31,5 +28,9 @@ const Questions = () => (
     <style jsx>{style}</style>
   </div>
 )
+
+Questions.propTypes = {
+  getTranslation: PropTypes.func
+}
 
 export { Questions }

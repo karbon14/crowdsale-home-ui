@@ -34,9 +34,19 @@ header {
       border-right: 1px solid rgba(255, 255, 255, 0.1);
       padding-right: 15px;
 
+      .flex-area {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .container-dropdown {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
       a {
-        margin-top: 20px;
-        margin-bottom: 20px;
         margin-left: 0;
         z-index: 6;
         height: auto;
