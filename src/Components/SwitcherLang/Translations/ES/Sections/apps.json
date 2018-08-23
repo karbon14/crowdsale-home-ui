@@ -1,0 +1,12 @@
+{
+  "section":"APLICACIONES",
+  "title":"Karbon14 multiplataforma",
+  "description":"Karbon14 creará aplicativos multiplataforma para que los usuarios puedan gestionar sus certificados de pruebas de vida, visualizarlos o crear una nueva de prueba de vida.",
+  "preparagraph1": "Protocol of Karbon14",
+  "paragraph1":"Karbon14 creará un protocolo de validación de los hashes para autenticar los certificados de prueba de vida. Asi como tambien se crearán diversas herramientas que usarán el protocolo para permitir así la validación desde distintas plataformas:",
+  "info1":"Wallet Karbon14",
+  "info2":"Validador de hashes",
+  "info3":"Aplicación multiplataforma de escritorio",
+  "info4":"Aplicación multiplataforma mobile",
+  "info5":"SDK para aplicaciones de terceros"
+}

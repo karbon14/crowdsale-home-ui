@@ -5,10 +5,11 @@ import { Button } from '@react-core/button'
 import { DownloadWhitepaper } from '../Utils'
 import style from './style.scss'
 import logo from './Assets/K14-Logo.svg'
+import { SwitcherLang } from '../SwitcherLang'
 import { Sticky, Scroll, Resize, MobileMenu } from './Helpers'
 import GithubCorner from 'react-github-corner'
 
-const Header = ({ sections = [] }) => (
+const Header = ({ sections = [], getTranslation }) => (
   <MobileMenu
     render={({ isOpen, onChange, onClose }) => (
       <div className={isOpen ? 'open' : ''}>
@@ -24,13 +25,18 @@ const Header = ({ sections = [] }) => (
                     <header className={`${top >= 80 ? 'sticky' : ''}`}>
                       <div className="container">
                         <div className="logo__area">
-                          <a>
-                            <img
-                              src={logo}
-                              alt="Karbon14 Logo"
-                              onClick={() => onGoToSection('intro')}
-                            />
-                          </a>
+                          <div className="flex-area">
+                            <a>
+                              <img
+                                src={logo}
+                                alt="Karbon14 Logo"
+                                onClick={() => onGoToSection('intro')}
+                              />
+                            </a>
+                            <div className="container-dropdown">
+                              <SwitcherLang />
+                            </div>
+                          </div>
                         </div>
                         <div className="links__area">
                           <div>
@@ -43,14 +49,14 @@ const Header = ({ sections = [] }) => (
                                     }
                                     onClick={() => onGoToSection(section)}
                                   >
-                                    {section}
+                                    {getTranslation(`header.${section}`)}
                                   </a>
                                 </li>
                               ))}
 
                               <Button
                                 theme={Karbon}
-                                label={'Whitepaper'}
+                                label={getTranslation('header.whitepaper')}
                                 type={'secondary'}
                                 onClick={DownloadWhitepaper}
                               />
@@ -59,7 +65,11 @@ const Header = ({ sections = [] }) => (
 
                           <Button
                             theme={Karbon}
-                            label={isMobile ? '' : 'Whitepaper'}
+                            label={
+                              isMobile
+                                ? ''
+                                : getTranslation('header.whitepaper')
+                            }
                             type={isMobile ? 'primary menu' : 'secondary'}
                             icon={isMobile ? 'fa-bars menu' : ''}
                             onClick={isMobile ? onChange : DownloadWhitepaper}
@@ -88,7 +98,8 @@ const Header = ({ sections = [] }) => (
 )
 
 Header.propTypes = {
-  sections: PropTypes.array
+  sections: PropTypes.array,
+  getTranslation: PropTypes.func
 }
 
 export default Header

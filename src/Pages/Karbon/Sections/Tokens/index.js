@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import style from './style.scss'
 import { Chart } from './Chart'
 import { Karbon } from '../../../../styles/core'
@@ -6,25 +7,25 @@ import { Button } from '@react-core/button'
 import { Title } from '../../../../Components/Title'
 import { Scroll } from '../../../../Components/Header/Helpers'
 
-const BuyButton = () => (
+const BuyButton = getTranslation => (
   <Scroll
     headerHeight={80}
     render={({ onGoToSection }) => (
       <Button
         theme={Karbon}
-        label={'Buy your tokens now'}
+        label={getTranslation('tokens.buy')}
         onClick={() => onGoToSection('tokens')}
       />
     )}
   />
 )
 
-const Tokens = () => (
+const Tokens = ({ getTranslation }) => (
   <div className="tokens">
     <Title
-      section="Tokens"
-      title="Pre-Sale & Values"
-      description="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui."
+      section={getTranslation('tokens.section')}
+      title={getTranslation('tokens.title')}
+      description={getTranslation('tokens.description')}
       theme="light"
     />
 
@@ -32,55 +33,59 @@ const Tokens = () => (
       <div className="sale">
         <div className="info-section">
           <div className="info">
-            <h6>Et dolorum fuga</h6>
-            <p>Temporibus autem quibusdam</p>
+            <h6>{getTranslation('tokens.info1')}</h6>
+            <p>{getTranslation('tokens.info1Description')}</p>
           </div>
           <div className="info">
-            <h6>Et harum quidem rerum</h6>
-            <p>Debitis aut rerum necessitatibus</p>
+            <h6>{getTranslation('tokens.info2')}</h6>
+            <p>{getTranslation('tokens.info2Description')}</p>
           </div>
           <div className="info">
-            <h6>Facilis est et expedita distinct</h6>
-            <p>Eeveniet ut et voluptates</p>
+            <h6>{getTranslation('tokens.info3')}</h6>
+            <p>{getTranslation('tokens.info3Description')}</p>
           </div>
 
-          <div className="buy">{BuyButton()}</div>
+          <div className="buy">{BuyButton(getTranslation)}</div>
         </div>
 
         <div className="info-section">
           <div className="info">
-            <h6>Et aut officiis</h6>
-            <p>Repudiandae sint et molestiae</p>
+            <h6>{getTranslation('tokens.info4')}</h6>
+            <p>{getTranslation('tokens.info4Description')}</p>
           </div>
           <div className="info">
-            <h6>Itaque earum rerum</h6>
-            <p>Hic tenetur a sapiente delectus</p>
+            <h6>{getTranslation('tokens.info5')}</h6>
+            <p>{getTranslation('tokens.info5Description')}</p>
           </div>
           <div className="info">
-            <h6>Ut aut reiciendis voluptatibus</h6>
-            <p>Amaiores alias consequatur</p>
+            <h6>{getTranslation('tokens.info6')}</h6>
+            <p>{getTranslation('tokens.info6Description')}</p>
           </div>
         </div>
       </div>
 
       <div className="distribution">
         <Chart
-          description="Token distribution"
+          description={getTranslation('tokens.distribution')}
           data={[
-            { name: 'Itsum', data: 30 },
-            { name: 'Consectetur', data: 10 },
-            { name: 'Dolor', data: 10 },
-            { name: 'Sit amet', data: 30 },
-            { name: 'Lorem', data: 20 }
+            { name: getTranslation('tokens.graphKey3'), data: 3 },
+            { name: getTranslation('tokens.graphKey2'), data: 50 },
+            { name: getTranslation('tokens.graphKey1'), data: 10 },
+            { name: getTranslation('tokens.graphKey4'), data: 7 },
+            { name: getTranslation('tokens.graphKey5'), data: 30 }
           ]}
-          colors={['#00f9a5', '#e55457', '#16a4fd', '#855af4', '#e5c154']}
+          colors={['#e55457', '#00f9a5', '#16a4fd', '#855af4', '#e5c154']}
         />
       </div>
 
-      <div className="buyMobile">{BuyButton()}</div>
+      <div className="buyMobile">{BuyButton(getTranslation)}</div>
     </div>
     <style jsx>{style}</style>
   </div>
 )
+
+Tokens.propTypes = {
+  getTranslation: PropTypes.func
+}
 
 export { Tokens }

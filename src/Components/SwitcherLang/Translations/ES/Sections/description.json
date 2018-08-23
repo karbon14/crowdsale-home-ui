@@ -1,0 +1,18 @@
+{
+  "karbon": "Karbon14",
+  "title": "Una aplicación revolucionaria.",
+  "subtitle": "Cómo funciona Karbon14 y qué resuelve.",
+  "paragraph1": "Karbon14 es la primera aplicación en utilizar los beneficios de la blockchain para realizar certificados de pruebas de vida. Los datos que se utilizarán para crear los certificados de pruebas de vida generan un hash único que será guardado en un Contrato Inteligente.",
+  "paragraph2": "El objetivo de Karbon14 es brindar la posibilidad de crear certificados de pruebas de vida de una manera rápida y sencilla.",
+  "whyKarbon": "La visión",
+  "whyTitle": "El desafío Karbon14",
+  "whySubtitle": "Uno de los principales objetivos de Karbon14 es que los usuarios acorten los tiempos de espera, adquieran un servicio confiable y fácil de utilizar, con la tranquilidad de que sus certificados estarán seguros, absolutamente inmutables, con alta disponibilidad y que perdurarán en el tiempo.",
+  "advantage1Title": "Contratos Inteligentes",
+  "advantage2Title": "Certificados de vida",
+  "advantage3Title": "Cripto escribanías",
+  "advantage1Description": "Karbon14 aprovecha el enorme potencial de los Contratos Inteligentes de Ethereum.",
+  "advantage2Description": "Karbon14 generará certificados de pruebas de vida inmutables y persistidos en la Blockchain.",
+  "advantage3Description": "Verificación descentralizada de los certificados de pruebas de vida de los usuarios.",
+  "downloadWhitepaper": "Descarga el Whitepaper",
+  "getWhitelisted": "Sscribite a la Whitelist"
+}
