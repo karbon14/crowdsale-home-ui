@@ -109,7 +109,7 @@ module.exports = (env, argv) => ({
         ]
       },
       {
-        test: /\.jsx?/,
+        test: /\.js$/,
         include: [APP_DIR],
         use: [{ loader: 'babel-loader' }]
       },

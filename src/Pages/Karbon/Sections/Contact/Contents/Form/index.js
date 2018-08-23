@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import * as yup from 'yup'
 import { Formik } from 'formik'
 import style from './style.scss'
@@ -7,7 +8,7 @@ import { TextField } from '@react-core/textfield'
 import { Textarea } from '@react-core/textarea'
 import { Button } from '@react-core/button'
 
-const contactOperation = async (values, api) => {
+const contactOperation = async (values, api, getTranslation) => {
   try {
     const res = await fetch(`${process.env.API_URL}/contact`, {
       method: 'POST',
@@ -23,7 +24,7 @@ const contactOperation = async (values, api) => {
 
     if (res.status === 200) {
       api.resetForm()
-      alert('Contact message sended successfully!')
+      alert(getTranslation('contact.contactedOK'))
     } else throw res
   } catch (e) {
     const error = await e.text()
@@ -31,30 +32,32 @@ const contactOperation = async (values, api) => {
   }
 }
 
-const validationSchema = yup.object().shape({
-  name: yup.string().required('Please enter your name'),
-  email: yup
-    .string()
-    .email('Please enter a valid email address')
-    .required('Please enter your email address'),
-  message: yup.string().required('Please enter your message')
-})
+const validationSchema = getTranslation => {
+  return yup.object().shape({
+    name: yup.string().required(getTranslation('contact.enterYourName')),
+    email: yup
+      .string()
+      .email()
+      .required(getTranslation('contact.enterYourEmail')),
+    message: yup.string().required(getTranslation('contact.enterYourMessage'))
+  })
+}
 
-const Form = () => (
+const Form = ({ getTranslation }) => (
   <div className="container">
     <Formik
       validateOnChange
       validateOnSubmit
-      onSubmit={(values, api) => contactOperation(values, api)}
+      onSubmit={(values, api) => contactOperation(values, api, getTranslation)}
       enableReinitialize
       initialValues={{ name: '', email: '', message: '' }}
-      validationSchema={validationSchema}
+      validationSchema={() => validationSchema(getTranslation)}
       render={api => (
         <form onSubmit={api.handleSubmit}>
           <TextField
             type="name"
             name="name"
-            label={'Yor Name'}
+            label={getTranslation('contact.yourName')}
             placeholder={api.errors.name}
             theme={Karbon}
             value={api.values.name}
@@ -66,7 +69,7 @@ const Form = () => (
           <TextField
             type="email"
             name="email"
-            label={'Yor Email'}
+            label={getTranslation('contact.yourEmail')}
             placeholder={api.errors.email}
             theme={Karbon}
             value={api.values.email}
@@ -78,7 +81,7 @@ const Form = () => (
           <Textarea
             type="text"
             name="message"
-            label={'Your Message'}
+            label={getTranslation('contact.yourMessage')}
             placeholder={api.errors.message}
             theme={Karbon}
             value={api.values.message}
@@ -91,7 +94,7 @@ const Form = () => (
             type="button"
             theme={Karbon}
             onClick={api.submitForm}
-            label={'Submit'}
+            label={getTranslation('contact.submit')}
           />
         </form>
       )}
@@ -99,5 +102,9 @@ const Form = () => (
     <style jsx>{style}</style>
   </div>
 )
+
+Form.propTypes = {
+  getTranslation: PropTypes.func
+}
 
 export { Form }

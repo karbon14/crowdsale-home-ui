@@ -1,16 +1,17 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Karbon } from '../../../../styles/core'
 import { TabView } from '@react-core/tabview'
 import style from './style.scss'
 import { Title } from '../../../../Components/Title'
 import { TitleDescription } from './TitleDescription'
 
-const Faq = () => (
+const Faq = ({ getTranslation }) => (
   <div className="faq">
     <Title
-      section="FAQS"
-      title="Frequently Asked Questions"
-      description="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident."
+      section={getTranslation('faq.section')}
+      title={getTranslation('faq.title')}
+      description={getTranslation('faq.description')}
     />
 
     <div className="tabs">
@@ -18,140 +19,108 @@ const Faq = () => (
         theme={Karbon}
         options={[
           {
-            name: 'GENERAL',
+            name: getTranslation('faq.tab1Name'),
             content: (
               <div className="contents">
                 <div className="content-section">
                   <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
+                    title={getTranslation('faq.tab1Title1')}
+                    description={getTranslation('faq.tab1Description1')}
                   />
                   <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
+                    title={getTranslation('faq.tab1Title2')}
+                    description={getTranslation('faq.tab1Description2')}
                   />
                 </div>
 
                 <div className="content-section">
                   <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
+                    title={getTranslation('faq.tab1Title3')}
+                    description={getTranslation('faq.tab1Description3')}
                   />
                   <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
+                    title={getTranslation('faq.tab1Title4')}
+                    description={getTranslation('faq.tab1Description4')}
                   />
                 </div>
               </div>
             )
           },
           {
-            name: 'PRE-ICO & ICO',
+            name: getTranslation('faq.tab2Name'),
             content: (
               <div className="contents">
                 <div className="content-section">
                   <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
+                    title={getTranslation('faq.tab2Title1')}
+                    description={getTranslation('faq.tab2Description1')}
                   />
                   <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
+                    title={getTranslation('faq.tab2Title2')}
+                    description={getTranslation('faq.tab2Description2')}
                   />
                 </div>
 
                 <div className="content-section">
                   <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
+                    title={getTranslation('faq.tab2Title3')}
+                    description={getTranslation('faq.tab2Description3')}
                   />
                   <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
+                    title={getTranslation('faq.tab2Title4')}
+                    description={getTranslation('faq.tab2Description4')}
                   />
                 </div>
               </div>
             )
           },
           {
-            name: 'TOKENS',
+            name: getTranslation('faq.tab3Name'),
             content: (
               <div className="contents">
                 <div className="content-section">
                   <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
+                    title={getTranslation('faq.tab3Title1')}
+                    description={getTranslation('faq.tab3Description1')}
                   />
                   <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
+                    title={getTranslation('faq.tab3Title2')}
+                    description={getTranslation('faq.tab3Description2')}
                   />
                 </div>
 
                 <div className="content-section">
                   <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
+                    title={getTranslation('faq.tab3Title3')}
+                    description={getTranslation('faq.tab3Description3')}
                   />
                   <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
+                    title={getTranslation('faq.tab3Title4')}
+                    description={getTranslation('faq.tab3Description4')}
                   />
                 </div>
               </div>
             )
           },
           {
-            name: 'CLIENT',
+            name: getTranslation('faq.tab4Name'),
             content: (
               <div className="contents">
                 <div className="content-section">
                   <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
+                    title={getTranslation('faq.tab4Title1')}
+                    description={getTranslation('faq.tab4Description1')}
                   />
                   <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
+                    title={getTranslation('faq.tab4Title2')}
+                    description={getTranslation('faq.tab4Description2')}
                   />
                 </div>
 
                 <div className="content-section">
                   <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
-                  />
-                  <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
-                  />
-                </div>
-              </div>
-            )
-          },
-          {
-            name: 'LEGAL',
-            content: (
-              <div className="contents">
-                <div className="content-section">
-                  <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
-                  />
-                  <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
-                  />
-                </div>
-
-                <div className="content-section">
-                  <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
-                  />
-                  <TitleDescription
-                    title="At vero eos et accusamus et iusto odio"
-                    description="Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est"
+                    title={getTranslation('faq.tab4Title3')}
+                    description={getTranslation('faq.tab4Description3')}
                   />
                 </div>
               </div>
@@ -164,5 +133,9 @@ const Faq = () => (
     <style jsx>{style}</style>
   </div>
 )
+
+Faq.propTypes = {
+  getTranslation: PropTypes.func
+}
 
 export { Faq }

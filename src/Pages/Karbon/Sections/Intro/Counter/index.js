@@ -20,7 +20,7 @@ const timer = () => {
   _setState(_state)
 }
 
-const Counter = ({ to }) => (
+const Counter = ({ to, getTranslation }) => (
   <Component
     initialState={{ to, days: 0, hours: 0, minutes: 0, seconds: 0 }}
     didMount={({ state, setState }) => {
@@ -31,27 +31,27 @@ const Counter = ({ to }) => (
     willUnmount={() => to && clearInterval(_interval)}
     render={({ state }) => (
       <div className="counter">
-        <h6>ICO WILL START IN</h6>
+        <h6>{getTranslation('counter.start')}</h6>
 
         <div className="time">
           <div className="unit">
             <span className="number">{pad(state.days, 2, '0')}</span>
-            <span>DAYS</span>
+            <span>{getTranslation('counter.days')}</span>
           </div>
 
           <div className="unit">
             <span className="number">{pad(state.hours, 2, '0')}</span>
-            <span>HOURS</span>
+            <span>{getTranslation('counter.hours')}</span>
           </div>
 
           <div className="unit">
             <span className="number">{pad(state.minutes, 2, '0')}</span>
-            <span>MINUTES</span>
+            <span>{getTranslation('counter.minutes')}</span>
           </div>
 
           <div className="unit">
             <span className="number last">{pad(state.seconds, 2, '0')}</span>
-            <span>SECONDS</span>
+            <span>{getTranslation('counter.seconds')}</span>
           </div>
         </div>
 
@@ -60,7 +60,7 @@ const Counter = ({ to }) => (
           render={({ onGoToSection }) => (
             <Button
               theme={Karbon}
-              label="Join & BUY TOKEN NOW"
+              label={getTranslation('counter.join')}
               onClick={() => onGoToSection('contact')}
             />
           )}
@@ -72,7 +72,8 @@ const Counter = ({ to }) => (
 )
 
 Counter.propTypes = {
-  to: PropTypes.string
+  to: PropTypes.string,
+  getTranslation: PropTypes.func
 }
 
 export { Counter }
