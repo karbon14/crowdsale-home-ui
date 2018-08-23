@@ -1,45 +1,46 @@
 import React from 'react'
-import { Karbon } from '../../../../../styles/core'
+import PropTypes from 'prop-types'
 import { Button } from '@react-core/button'
 import { Feature } from './Feature'
+import style from './style.scss'
+import { Karbon } from '../../../../../styles/core'
 import { Title } from '../../../../../Components/Title'
 import { Scroll } from '../../../../../Components/Header/Helpers'
 import { DownloadWhitepaper } from '../../../../../Components/Utils'
-import style from './style.scss'
 import blockchain from './Assets/features-blockchain.png'
 import token from './Assets/features-token.png'
 import integration from './Assets/features-integration.png'
 
-const Advantages = () => (
+const Advantages = ({ getTranslation }) => (
   <div className="advantages">
     <Title
-      section="Why Karbon14"
-      title="Competitive Advantage"
-      description="Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+      section={getTranslation('description.whyKarbon')}
+      title={getTranslation('description.whyTitle')}
+      description={getTranslation('description.whySubtitle')}
     />
 
     <div className="features">
       <Feature
         img={blockchain}
-        title="Ut enim ad minima veniam"
-        description="Ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+        title={getTranslation('description.advantage1Title')}
+        description={getTranslation('description.advantage1Description')}
       />
       <Feature
         img={token}
-        title="Quis autem vel eum iure"
-        description="reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur."
+        title={getTranslation('description.advantage2Title')}
+        description={getTranslation('description.advantage2Description')}
       />
       <Feature
         img={integration}
-        title="But I must explain to you"
-        description="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis."
+        title={getTranslation('description.advantage3Title')}
+        description={getTranslation('description.advantage3Description')}
       />
     </div>
 
     <div className="links">
       <Button
         theme={Karbon}
-        label="Download WHitepaper"
+        label={getTranslation('description.downloadWhitepaper')}
         onClick={DownloadWhitepaper}
       />
       <Scroll
@@ -47,7 +48,7 @@ const Advantages = () => (
         render={({ onGoToSection }) => (
           <Button
             theme={Karbon}
-            label="Apply To Get Whitelisted"
+            label={getTranslation('description.getWhitelisted')}
             onClick={() => onGoToSection('contact')}
           />
         )}
@@ -56,5 +57,9 @@ const Advantages = () => (
     <style jsx>{style}</style>
   </div>
 )
+
+Advantages.propTypes = {
+  getTranslation: PropTypes.func
+}
 
 export { Advantages }

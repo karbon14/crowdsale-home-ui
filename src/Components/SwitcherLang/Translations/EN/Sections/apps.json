@@ -1,0 +1,12 @@
+{
+  "section":"APPS",
+  "title":"Karbon14 Mobile App",
+  "description":"Karbon14 will create multiplatform applications so that users can manage their proof of life certificates, visualize them or create a new proof of life.",
+  "preparagraph1": "Protocol",
+  "paragraph1":"Karbon14 will create a validation protocol for the hashes to authenticate the proof of life certificates. As well as several tools will be created that will use the protocol to allow validation from different platforms:",
+  "info1":"Wallet Karbon14",
+  "info2":"Validator of hash",
+  "info3":"Cross-platform application desktop",
+  "info4":"Cross-platform application mobile",
+  "info5":"SDK for third-party applications"
+}
