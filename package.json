@@ -84,6 +84,6 @@
     "smoothscroll-polyfill": "0.4.3",
     "url-search-params-polyfill": "4.0.1",
     "whatwg-fetch": "2.0.4",
-    "yup": "0.26.1"
+    "yup": "0.26.3"
   }
 }
