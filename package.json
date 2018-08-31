@@ -59,7 +59,7 @@
     "@react-core/tabview": "0.1.37",
     "@react-core/textarea": "0.1.37",
     "@react-core/textfield": "0.1.37",
-    "@react-core/theme-provider": "0.1.37",
+    "@react-core/theme-provider": "0.1.40",
     "@reactions/component": "2.0.2",
     "babel-polyfill": "6.26.0",
     "convert-units": "2.3.4",
