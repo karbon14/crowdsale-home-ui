@@ -1,4 +1,4 @@
-# Karbon14 home UI
+# Karbon14 Home UI
 [![Travis badge](https://travis-ci.org/karbon14/home-ui.svg?branch=master)](https://travis-ci.org/karbon14/home-ui)
 [![Greenkeeper badge](https://badges.greenkeeper.io/karbon14/home-ui.svg)](https://greenkeeper.io/)
 
