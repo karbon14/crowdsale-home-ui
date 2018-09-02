@@ -67,7 +67,6 @@ npm run start
 - Font awesome
 - Lodash
 - React
-- Redux
 - Webpack
 
 ## Team
