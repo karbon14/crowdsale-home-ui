@@ -83,6 +83,7 @@
     "recharts": "1.1.0",
     "smoothscroll-polyfill": "0.4.3",
     "url-search-params-polyfill": "4.0.1",
+    "web3": "1.0.0-beta.34",
     "whatwg-fetch": "2.0.4",
     "yup": "0.26.1"
   }

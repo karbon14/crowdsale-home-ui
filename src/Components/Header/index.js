@@ -57,7 +57,7 @@ const Header = ({ sections = [], getTranslation }) => (
                               <Button
                                 theme={Karbon}
                                 label={getTranslation('header.whitepaper')}
-                                type={'secondary'}
+                                type="secondary"
                                 onClick={DownloadWhitepaper}
                               />
                             </ul>

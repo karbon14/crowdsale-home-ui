@@ -1,8 +1,14 @@
 {
   "start": "La ICO comienza en",
+  "end": "La ICO finaliza en",
   "days": "DÍAS",
   "hours": "HORAS",
   "minutes": "MINUTOS",
   "seconds": "SEGUNDOS",
-  "join": "ÚNETE Y COMPRA TOKENS HOY"
+  "join": "ÚNETE Y COMPRA TOKENS HOY",
+  "eth": "ETH",
+  "raised": "Alcanzado",
+  "goal": "Objetivo",
+  "softCap": "Soft Cap",
+  "hardCap": "Hard Cap"
 }

@@ -31,6 +31,17 @@ const getPlugins = argv => {
       'process.env.NODE_ENV': JSON.stringify(argv.mode),
       'process.env.API_URL': JSON.stringify(
         process.env.API_URL || 'http://localhost:80/v1'
+      ),
+      'process.env.CROWDSALE_URL': JSON.stringify(
+        process.env.CROWDSALE_URL || 'https://crowdsale.karbon14.org'
+      ),
+      'process.env.TOKEN_ADDRESS': JSON.stringify(
+        process.env.TOKEN_ADDRESS ||
+          '0xd30c48978bbc5b56928b317610ad519389e0277f'
+      ),
+      'process.env.CROWDSALE_ADDRESS': JSON.stringify(
+        process.env.CROWDSALE_ADDRESS ||
+          '0x3d4cbf00bc6399ea556dce105befe128b4a701af'
       )
     })
   ]

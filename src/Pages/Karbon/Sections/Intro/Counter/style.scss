@@ -20,7 +20,6 @@
 
   .time {
     display: flex;
-    padding-bottom: 33px;
 
     .unit {
       min-width: 85px;
@@ -61,6 +60,7 @@
   }
 
   :global(button) {
+    margin-top: 30px;
     border-radius: 19px;
     background: linear-gradient(to right, #340075 0%, #0d9ee0 100%);
 
@@ -75,6 +75,8 @@
     padding: 20px 0;
 
     .time {
+      padding-bottom: 15px;
+
       .unit {
         span.number {
           font-size: 32px;
@@ -86,6 +88,10 @@
           }
         }
       }
+    }
+
+    :global(button) {
+      margin-top: 30px;
     }
   }
 }

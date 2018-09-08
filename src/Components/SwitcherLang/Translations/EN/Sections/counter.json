@@ -1,8 +1,14 @@
 {
   "start": "ICO WILL START IN",
+  "end": "ICO WILL END IN",
   "days": "DAYS",
   "hours": "HOURS",
   "minutes": "MINUTES",
   "seconds": "SECONDS",
-  "join": "Join & BUY TOKEN NOW"
+  "join": "Join & BUY TOKEN NOW",
+  "eth": "ETH",
+  "raised": "Raised",
+  "goal": "Goal",
+  "softCap": "Soft Cap",
+  "hardCap": "Hard Cap"
 }
