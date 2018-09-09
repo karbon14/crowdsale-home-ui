@@ -11,6 +11,7 @@ import './Assets/azure.png'
 
 const updateUI = async ({ deployedContracts, setState, web3 }) => {
   const { Karbon14Crowdsale = {} } = deployedContracts
+  const { methods = {} } = Karbon14Crowdsale
   const {
     getTokenTotalSupply,
     openingTime,
@@ -19,37 +20,44 @@ const updateUI = async ({ deployedContracts, setState, web3 }) => {
     cap,
     weiRaised,
     rate
-  } = Karbon14Crowdsale.methods
+  } = methods
 
   // Get Crowdsale Data
 
-  await getTokenTotalSupply()
-    .call()
-    .then(res => setState({ totalSupply: web3.utils.fromWei(res, 'ether') }))
+  getTokenTotalSupply &&
+    (await getTokenTotalSupply()
+      .call()
+      .then(res => setState({ totalSupply: web3.utils.fromWei(res, 'ether') })))
 
-  await openingTime()
-    .call()
-    .then(res => setState({ openingTime: res }))
+  openingTime &&
+    (await openingTime()
+      .call()
+      .then(res => setState({ openingTime: res })))
 
-  await closingTime()
-    .call()
-    .then(res => setState({ closingTime: res }))
+  closingTime &&
+    (await closingTime()
+      .call()
+      .then(res => setState({ closingTime: res })))
 
-  await goal()
-    .call()
-    .then(res => setState({ goal: web3.utils.fromWei(res, 'ether') }))
+  goal &&
+    (await goal()
+      .call()
+      .then(res => setState({ goal: web3.utils.fromWei(res, 'ether') })))
 
-  await cap()
-    .call()
-    .then(res => setState({ cap: web3.utils.fromWei(res, 'ether') }))
+  cap &&
+    (await cap()
+      .call()
+      .then(res => setState({ cap: web3.utils.fromWei(res, 'ether') })))
 
-  await weiRaised()
-    .call()
-    .then(res => setState({ weiRaised: web3.utils.fromWei(res, 'ether') }))
+  weiRaised &&
+    (await weiRaised()
+      .call()
+      .then(res => setState({ weiRaised: web3.utils.fromWei(res, 'ether') })))
 
-  await rate()
-    .call()
-    .then(res => setState({ rate: res }))
+  rate &&
+    (await rate()
+      .call()
+      .then(res => setState({ rate: res })))
 }
 
 const Intro = ({ getTranslation, deployedContracts = {}, web3 }) => (

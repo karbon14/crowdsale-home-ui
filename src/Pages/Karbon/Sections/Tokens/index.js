@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import style from './style.scss'
 import { Chart } from './Chart'
-import { Karbon } from '../../../../styles/core'
+import { theme } from '@react-core/theme-karbon'
 import { Button } from '@react-core/button'
 import { Title } from '../../../../Components/Title'
 import { Scroll } from '../../../../Components/Header/Helpers'
@@ -12,7 +12,7 @@ const BuyButton = getTranslation => (
     headerHeight={80}
     render={({ onGoToSection }) => (
       <Button
-        theme={Karbon}
+        theme={theme}
         label={getTranslation('tokens.buy')}
         onClick={() => onGoToSection('tokens')}
       />

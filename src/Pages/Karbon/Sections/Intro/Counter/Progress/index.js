@@ -28,7 +28,7 @@ const Progress = ({
           className="raised"
           style={{
             width: `calc(${percent}% + ${
-              raisedValue && percent < 10 ? 25 : 0
+              percent && (raisedValue && percent < 10) ? 10 : 0
             }px)`
           }}
         />

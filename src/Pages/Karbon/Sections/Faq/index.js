@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Karbon } from '../../../../styles/core'
+import { theme } from '@react-core/theme-karbon'
 import { TabView } from '@react-core/tabview'
 import style from './style.scss'
 import { Title } from '../../../../Components/Title'
@@ -16,7 +16,7 @@ const Faq = ({ getTranslation }) => (
 
     <div className="tabs">
       <TabView
-        theme={Karbon}
+        theme={theme}
         options={[
           {
             name: getTranslation('faq.tab1Name'),

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import * as yup from 'yup'
 import { Formik } from 'formik'
 import style from './style.scss'
-import { Karbon } from '../../../../../../styles/core'
+import { theme } from '@react-core/theme-karbon'
 import { TextField } from '@react-core/textfield'
 import { Textarea } from '@react-core/textarea'
 import { Button } from '@react-core/button'
@@ -59,7 +59,7 @@ const Form = ({ getTranslation }) => (
             name="name"
             label={getTranslation('contact.yourName')}
             placeholder={api.errors.name}
-            theme={Karbon}
+            theme={theme}
             value={api.values.name}
             onChange={api.handleChange}
             onBlur={api.handleBlur}
@@ -71,7 +71,7 @@ const Form = ({ getTranslation }) => (
             name="email"
             label={getTranslation('contact.yourEmail')}
             placeholder={api.errors.email}
-            theme={Karbon}
+            theme={theme}
             value={api.values.email}
             onChange={api.handleChange}
             onBlur={api.handleBlur}
@@ -83,7 +83,7 @@ const Form = ({ getTranslation }) => (
             name="message"
             label={getTranslation('contact.yourMessage')}
             placeholder={api.errors.message}
-            theme={Karbon}
+            theme={theme}
             value={api.values.message}
             onChange={api.handleChange}
             onBlur={api.handleBlur}
@@ -92,7 +92,7 @@ const Form = ({ getTranslation }) => (
 
           <Button
             type="button"
-            theme={Karbon}
+            theme={theme}
             onClick={api.submitForm}
             label={getTranslation('contact.submit')}
           />

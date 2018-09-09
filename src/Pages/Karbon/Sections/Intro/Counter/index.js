@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 import { Button } from '@react-core/button'
 import Component from '@reactions/component'
 import { Progress } from './Progress'
-import { Karbon } from '../../../../../styles/core'
+import { theme } from '@react-core/theme-karbon'
 import { Scroll } from '../../../../../Components/Header/Helpers'
 import style from './style.scss'
 
@@ -35,7 +35,7 @@ const timer = () => {
 }
 
 const ActionButton = (label, onClick) => {
-  return <Button theme={Karbon} label={label} onClick={onClick} />
+  return <Button theme={theme} label={label} onClick={onClick} />
 }
 
 const Counter = ({
@@ -117,20 +117,22 @@ const Counter = ({
             />
           ) : null}
 
-          <Scroll
-            headerHeight={80}
-            render={({ onGoToSection }) => {
-              return showProgress ? (
-                <a rel="noopener noreferrer" href={cwowdsaleURL}>
-                  {ActionButton(getTranslation('counter.join'), noop)}
-                </a>
-              ) : (
-                ActionButton(getTranslation('counter.join'), () =>
-                  onGoToSection('contact')
+          {_interval && showProgress ? (
+            <Scroll
+              headerHeight={80}
+              render={({ onGoToSection }) => {
+                return hasStarted ? (
+                  <a rel="noopener noreferrer" href={cwowdsaleURL}>
+                    {ActionButton(getTranslation('counter.join'), noop)}
+                  </a>
+                ) : (
+                  ActionButton(getTranslation('counter.subscribe'), () =>
+                    onGoToSection('contact')
+                  )
                 )
-              )
-            }}
-          />
+              }}
+            />
+          ) : null}
           <style jsx>{style}</style>
         </div>
       )
