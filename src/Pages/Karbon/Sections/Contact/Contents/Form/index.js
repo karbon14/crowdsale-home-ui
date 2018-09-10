@@ -6,6 +6,7 @@ import style from './style.scss'
 import { theme } from '@react-core/theme-karbon'
 import { TextField } from '@react-core/textfield'
 import { Textarea } from '@react-core/textarea'
+import { toast } from '@react-core/toast'
 import { Button } from '@react-core/button'
 
 const contactOperation = async (values, api, getTranslation) => {
@@ -23,12 +24,16 @@ const contactOperation = async (values, api, getTranslation) => {
     })
 
     if (res.status === 200) {
+      toast.success(getTranslation('contact.contactedOK'), {
+        position: toast.POSITION.BOTTOM_LEFT
+      })
       api.resetForm()
-      alert(getTranslation('contact.contactedOK'))
     } else throw res
   } catch (e) {
     const error = await e.text()
-    alert(error)
+    toast.error(error, {
+      position: toast.POSITION.BOTTOM_LEFT
+    })
   }
 }
 

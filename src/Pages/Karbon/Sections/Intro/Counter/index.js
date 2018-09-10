@@ -30,6 +30,8 @@ const timer = () => {
   const minutes = d.subtract(hours, 'hours').diff(now, 'minutes')
   const seconds = d.subtract(minutes, 'minutes').diff(now, 'seconds')
 
+  if (days < 0 || hours < 0 || minutes < 0 || seconds < 0) return
+
   _state = { ..._state, days, hours, minutes, seconds }
   _setState(_state)
 }
