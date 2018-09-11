@@ -12,52 +12,14 @@ import './Assets/azure.png'
 const updateUI = async ({ deployedContracts, setState, web3 }) => {
   const { Karbon14Crowdsale = {} } = deployedContracts
   const { methods = {} } = Karbon14Crowdsale
-  const {
-    getTokenTotalSupply,
-    openingTime,
-    closingTime,
-    goal,
-    cap,
-    weiRaised,
-    rate
-  } = methods
+  const { weiRaised } = methods
 
   // Get Crowdsale Data
-
-  getTokenTotalSupply &&
-    (await getTokenTotalSupply()
-      .call()
-      .then(res => setState({ totalSupply: web3.utils.fromWei(res, 'ether') })))
-
-  openingTime &&
-    (await openingTime()
-      .call()
-      .then(res => setState({ openingTime: res })))
-
-  closingTime &&
-    (await closingTime()
-      .call()
-      .then(res => setState({ closingTime: res })))
-
-  goal &&
-    (await goal()
-      .call()
-      .then(res => setState({ goal: web3.utils.fromWei(res, 'ether') })))
-
-  cap &&
-    (await cap()
-      .call()
-      .then(res => setState({ cap: web3.utils.fromWei(res, 'ether') })))
 
   weiRaised &&
     (await weiRaised()
       .call()
       .then(res => setState({ weiRaised: web3.utils.fromWei(res, 'ether') })))
-
-  rate &&
-    (await rate()
-      .call()
-      .then(res => setState({ rate: res })))
 }
 
 const Intro = ({ getTranslation, deployedContracts = {}, web3 }) => (
@@ -65,13 +27,13 @@ const Intro = ({ getTranslation, deployedContracts = {}, web3 }) => (
     render={() => (
       <Component
         initialState={{
-          totalSupply: undefined,
-          openingTime: undefined,
-          closingTime: undefined,
-          goal: undefined,
-          cap: undefined,
+          totalSupply: 3600000000,
+          openingTime: 1541040757,
+          closingTime: 1556679157,
+          goal: 15000,
+          cap: 60000,
           weiRaised: undefined,
-          rate: undefined
+          rate: 30000
         }}
         deployedContracts={deployedContracts}
         didUpdate={({ props, prevProps, setState }) => {
@@ -101,11 +63,7 @@ const Intro = ({ getTranslation, deployedContracts = {}, web3 }) => (
                     cwowdsaleURL={process.env.CROWDSALE_URL}
                     getTranslation={getTranslation}
                     showProgress={
-                      state.cap &&
-                      state.goal &&
-                      state.weiRaised &&
-                      state.totalSupply &&
-                      state.rate
+                      state.cap && state.goal && state.totalSupply && state.rate
                     }
                   />
                 </div>
