@@ -17,7 +17,7 @@ const formatDatesUTC = state => {
   return {
     from: moment.unix(state.from).utc(),
     to: moment.unix(state.to).utc(),
-    now: moment.utc().subtract(3, 'hours')
+    now: moment.utc()
   }
 }
 
@@ -76,13 +76,27 @@ const Counter = ({
       const hasStarted = state.from && from.diff(now) < 0
       const hasEnded = state.to && to.diff(now) < 0
 
+      const displatTime = () => {
+        if (_interval) {
+          const { from, to } = formatDatesUTC(state)
+          const d = !hasStarted && !hasEnded ? from : to
+          return `${d.format('DD/MM/YYYY HH:mm')} (UTC)`
+        }
+      }
+
       return (
         <div className="counter">
           {_interval && !hasStarted && !hasEnded ? (
-            <h6>{getTranslation('counter.start')}</h6>
+            <React.Fragment>
+              <h6>{getTranslation('counter.start')}</h6>
+              <h3>{displatTime()}</h3>
+            </React.Fragment>
           ) : null}
           {_interval && hasStarted && !hasEnded ? (
-            <h6>{getTranslation('counter.end')}</h6>
+            <React.Fragment>
+              <h6>{getTranslation('counter.end')}</h6>
+              <h3>{displatTime()}</h3>
+            </React.Fragment>
           ) : null}
 
           <div className="time">
@@ -129,7 +143,7 @@ const Counter = ({
                   </a>
                 ) : (
                   ActionButton(getTranslation('counter.subscribe'), () =>
-                    onGoToSection('contact')
+                    onGoToSection('subscribe')
                   )
                 )
               }}

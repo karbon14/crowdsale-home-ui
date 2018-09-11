@@ -17,10 +17,16 @@ import {
   abi as CrowdsaleABI,
   networks as CrowdsaleNetworks
 } from './contracts/Karbon14Crowdsale.json'
-import {
-  abi as TokenABI,
-  networks as TokenNetworks
-} from './contracts/Karbon14Token.json'
+
+const getInfuraURL = () => {
+  const infuraURLs = {
+    '1': 'https://mainnet.infura.io',
+    '3': 'https://ropsten.infura.io',
+    '5777': 'http://localhost:8545'
+  }
+
+  return infuraURLs[process.env.NETWORK]
+}
 
 const Karbon = () => (
   <LanguageContext.Consumer>
@@ -28,16 +34,12 @@ const Karbon = () => (
       <EthereumProvider
         contracts={[
           {
-            name: 'Karbon14Token',
-            ABI: TokenABI,
-            address: TokenNetworks[process.env.NETWORK].address
-          },
-          {
             name: 'Karbon14Crowdsale',
             ABI: CrowdsaleABI,
             address: CrowdsaleNetworks[process.env.NETWORK].address
           }
         ]}
+        network={getInfuraURL()}
       >
         {({ deployedContracts = {}, web3 }) => (
           <div className="karbon">

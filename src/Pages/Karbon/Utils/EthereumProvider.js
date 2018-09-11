@@ -9,11 +9,7 @@ const deployContract = async (web3, contract) => {
   return await new web3.eth.Contract(contract.ABI, contract.address)
 }
 
-const EthereumProvider = ({
-  contracts = [],
-  children,
-  network = 'https://ropsten.infura.io/'
-}) => (
+const EthereumProvider = ({ contracts = [], children, network }) => (
   <EthereumContext.Consumer>
     {() => (
       <Component
