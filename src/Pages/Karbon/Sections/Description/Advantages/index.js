@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Button } from '@react-core/button'
 import { Feature } from './Feature'
 import style from './style.scss'
-import { Karbon } from '../../../../../styles/core'
+import { theme } from '@react-core/theme-karbon'
 import { Title } from '../../../../../Components/Title'
 import { Scroll } from '../../../../../Components/Header/Helpers'
 import { DownloadWhitepaper } from '../../../../../Components/Utils'
@@ -39,7 +39,7 @@ const Advantages = ({ getTranslation }) => (
 
     <div className="links">
       <Button
-        theme={Karbon}
+        theme={theme}
         label={getTranslation('description.downloadWhitepaper')}
         onClick={DownloadWhitepaper}
       />
@@ -47,7 +47,7 @@ const Advantages = ({ getTranslation }) => (
         headerHeight={80}
         render={({ onGoToSection }) => (
           <Button
-            theme={Karbon}
+            theme={theme}
             label={getTranslation('description.getWhitelisted')}
             onClick={() => onGoToSection('contact')}
           />

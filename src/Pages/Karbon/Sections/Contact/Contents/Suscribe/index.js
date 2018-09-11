@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import * as yup from 'yup'
 import { Formik } from 'formik'
+import { toast } from '@react-core/toast'
 import style from './style.scss'
 
 const suscribeOperation = async (values, api, getTranslation) => {
@@ -15,12 +16,16 @@ const suscribeOperation = async (values, api, getTranslation) => {
     })
 
     if (res.status === 200) {
+      toast.success(getTranslation('contact.subscribedOK'), {
+        position: toast.POSITION.BOTTOM_LEFT
+      })
       api.resetForm()
-      alert(getTranslation('contact.contactedOK'))
     } else throw res
   } catch (e) {
     const error = await e.text()
-    alert(error)
+    toast.error(error, {
+      position: toast.POSITION.BOTTOM_LEFT
+    })
   }
 }
 

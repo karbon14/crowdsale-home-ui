@@ -14,13 +14,21 @@
     line-height: 1.33;
     font-weight: 600;
     text-align: center;
-    margin: 0 0 18px;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    color: #3347aa;
+    margin: 5px 0 5px;
+    font-size: 0.75em;
+    line-height: 1.53;
+    font-weight: 600;
+    text-align: center;
     text-transform: uppercase;
   }
 
   .time {
     display: flex;
-    padding-bottom: 33px;
 
     .unit {
       min-width: 85px;
@@ -61,6 +69,7 @@
   }
 
   :global(button) {
+    margin-top: 30px;
     border-radius: 19px;
     background: linear-gradient(to right, #340075 0%, #0d9ee0 100%);
 
@@ -75,6 +84,8 @@
     padding: 20px 0;
 
     .time {
+      padding-bottom: 15px;
+
       .unit {
         span.number {
           font-size: 32px;
@@ -86,6 +97,10 @@
           }
         }
       }
+    }
+
+    :global(button) {
+      margin-top: 30px;
     }
   }
 }

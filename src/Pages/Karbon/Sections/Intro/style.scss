@@ -17,14 +17,14 @@
     width: 100%;
     display: flex;
     margin: 0 auto;
+    min-height: 100vh;
     padding-right: 15px;
     padding-left: 15px;
     justify-content: space-between;
     margin-bottom: 50px;
-    height: 100vh;
 
     .banner-content {
-      margin-top: 80px;
+      margin-top: 120px;
       padding-top: 60px;
       max-height: 675px;
       width: 100%;
@@ -105,6 +105,7 @@
 
         .content-right {
           width: 100%;
+          min-height: 270px;
         }
       }
     }
@@ -183,6 +184,7 @@
   .intro {
     .container {
       .banner-content {
+        margin-top: 80px;
         margin-bottom: 0px;
       }
     }

@@ -31,7 +31,11 @@ const getPlugins = argv => {
       'process.env.NODE_ENV': JSON.stringify(argv.mode),
       'process.env.API_URL': JSON.stringify(
         process.env.API_URL || 'http://localhost:80/v1'
-      )
+      ),
+      'process.env.CROWDSALE_URL': JSON.stringify(
+        process.env.CROWDSALE_URL || 'https://crowdsale.karbon14.org'
+      ),
+      'process.env.NETWORK': JSON.stringify(process.env.NETWORK || '1')
     })
   ]
 
