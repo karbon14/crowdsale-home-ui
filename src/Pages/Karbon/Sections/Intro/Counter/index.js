@@ -1,6 +1,5 @@
 import React from 'react'
 import moment from 'moment'
-import isEqual from 'lodash/isEqual'
 import padStart from 'lodash/padStart'
 import noop from 'lodash/noop'
 import PropTypes from 'prop-types'
@@ -55,20 +54,11 @@ const Counter = ({
     from={from}
     to={to}
     initialState={{ from, to, days: 0, hours: 0, minutes: 0, seconds: 0 }}
-    didUpdate={({ props, prevProps, state, prevState, setState }) => {
-      if (!isEqual(props.from, prevProps.from)) setState({ from })
-      if (!isEqual(props.to, prevProps.to)) setState({ to })
-
-      const hasDates = state.from && state.to
-      const differFrom = !isEqual(state.from, prevState.from)
-      const differTo = !isEqual(state.to, prevState.to)
-
-      if (hasDates && (differFrom || differTo)) {
-        _state = state
-        _setState = setState
-        _interval = setInterval(timer, 1000)
-        timer()
-      }
+    didMount={({ state, setState }) => {
+      _state = state
+      _setState = setState
+      _interval = setInterval(timer, 1000)
+      timer()
     }}
     willUnmount={() => to && clearInterval(_interval)}
     render={({ state }) => {
