@@ -5,20 +5,6 @@ import { Chart } from './Chart'
 import { theme } from '@react-core/theme-karbon'
 import { Button } from '@react-core/button'
 import { Title } from '../../../../Components/Title'
-import { Scroll } from '../../../../Components/Header/Helpers'
-
-const BuyButton = getTranslation => (
-  <Scroll
-    headerHeight={80}
-    render={({ onGoToSection }) => (
-      <Button
-        theme={theme}
-        label={getTranslation('tokens.buy')}
-        onClick={() => onGoToSection('tokens')}
-      />
-    )}
-  />
-)
 
 const Tokens = ({ getTranslation }) => (
   <div className="tokens">
@@ -45,7 +31,11 @@ const Tokens = ({ getTranslation }) => (
             <p>{getTranslation('tokens.info3Description')}</p>
           </div>
 
-          <div className="buy">{BuyButton(getTranslation)}</div>
+          <div className="buy">
+            <a rel="noopener noreferrer" href={process.env.CROWDSALE_URL}>
+              <Button theme={theme} label={getTranslation('tokens.buy')} />
+            </a>
+          </div>
         </div>
 
         <div className="info-section">
@@ -69,16 +59,20 @@ const Tokens = ({ getTranslation }) => (
           description={getTranslation('tokens.distribution')}
           data={[
             { name: getTranslation('tokens.graphKey3'), data: 3 },
-            { name: getTranslation('tokens.graphKey2'), data: 50 },
-            { name: getTranslation('tokens.graphKey1'), data: 10 },
             { name: getTranslation('tokens.graphKey4'), data: 7 },
-            { name: getTranslation('tokens.graphKey5'), data: 30 }
+            { name: getTranslation('tokens.graphKey1'), data: 10 },
+            { name: getTranslation('tokens.graphKey5'), data: 30 },
+            { name: getTranslation('tokens.graphKey2'), data: 50 }
           ]}
-          colors={['#e55457', '#00f9a5', '#16a4fd', '#855af4', '#e5c154']}
+          colors={['#e55457', '#855af4', '#16a4fd', '#e5c154', '#00f9a5']}
         />
       </div>
 
-      <div className="buyMobile">{BuyButton(getTranslation)}</div>
+      <div className="buyMobile">
+        <a rel="noopener noreferrer" href={process.env.CROWDSALE_URL}>
+          <Button theme={theme} label={getTranslation('tokens.buy')} />
+        </a>
+      </div>
     </div>
     <style jsx>{style}</style>
   </div>
