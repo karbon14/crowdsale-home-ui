@@ -30,7 +30,7 @@ const getInfuraURL = () => {
 
 const Karbon = () => (
   <LanguageContext.Consumer>
-    {({ getTranslation }) => (
+    {({ selectedLanguage, getTranslation }) => (
       <EthereumProvider
         contracts={[
           {
@@ -45,6 +45,7 @@ const Karbon = () => (
           <div className="karbon">
             <Header
               getTranslation={getTranslation}
+              selectedLanguage={selectedLanguage}
               sections={[
                 'description',
                 'tokens',
@@ -61,7 +62,10 @@ const Karbon = () => (
               deployedContracts={deployedContracts}
               web3={web3}
             />
-            <Description getTranslation={getTranslation} />
+            <Description
+              selectedLanguage={selectedLanguage}
+              getTranslation={getTranslation}
+            />
             <Tokens getTranslation={getTranslation} />
             <Apps getTranslation={getTranslation} />
             <Team getTranslation={getTranslation} />
