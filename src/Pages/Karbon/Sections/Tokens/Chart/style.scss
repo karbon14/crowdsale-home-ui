@@ -9,7 +9,7 @@ section {
 
   .graph {
     width: 465px;
-    height: 490px;
+    height: 350px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -18,20 +18,23 @@ section {
       width: 65px;
       height: 65px;
       position: absolute;
-      top: 128px;
+      top: 140px;
       display: flex;
       justify-content: center;
       align-self: center;
     }
 
     .labels-container {
-      padding: 0 35px;
-      display: flex;
-      flex-direction: column;
+      top: 335px;
+      position: absolute;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      display: block;
+      text-align: center;
 
       .label {
-        display: flex;
-        margin-bottom: 25px;
+        display: inline-block;
 
         &-color {
           width: 20px;
@@ -45,6 +48,7 @@ section {
 
         span {
           display: flex;
+          margin-right: 20px;
 
           p {
             color: #fff;
@@ -77,6 +81,31 @@ section {
       width: 320px;
       min-width: 320px;
       max-width: 100%;
+
+      .labels-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        display: block;
+        text-align: center;
+  
+        .label {
+          span {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  section {
+    .graph {
+      .labels-container {
+        top: 315px;
+        margin: 0 10px;
+      }
     }
   }
 }

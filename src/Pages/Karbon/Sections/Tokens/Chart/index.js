@@ -33,11 +33,11 @@ const Chart = ({ description, data = [], colors = [] }) => (
       <div className="labels-container">
         {data.map((entry, index) => (
           <div key={index} className="label">
-            <div
-              className="label-color"
-              style={{ borderColor: colors[index] }}
-            />
             <span>
+              <div
+                className="label-color"
+                style={{ borderColor: colors[index] }}
+              />
               <p>{`${data[index].data}%`}</p>
               <p>{`- ${data[index].name}`}</p>
             </span>
