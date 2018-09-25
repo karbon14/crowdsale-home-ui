@@ -11,7 +11,7 @@ import blockchain from './Assets/features-blockchain.png'
 import token from './Assets/features-token.png'
 import integration from './Assets/features-integration.png'
 
-const Advantages = ({ getTranslation }) => (
+const Advantages = ({ selectedLanguage, getTranslation }) => (
   <div className="advantages">
     <Title
       section={getTranslation('description.whyKarbon')}
@@ -41,7 +41,7 @@ const Advantages = ({ getTranslation }) => (
       <Button
         theme={theme}
         label={getTranslation('description.downloadWhitepaper')}
-        onClick={DownloadWhitepaper}
+        onClick={() => DownloadWhitepaper(selectedLanguage)}
       />
       <Scroll
         headerHeight={80}
@@ -59,6 +59,7 @@ const Advantages = ({ getTranslation }) => (
 )
 
 Advantages.propTypes = {
+  selectedLanguage: PropTypes.string,
   getTranslation: PropTypes.func
 }
 

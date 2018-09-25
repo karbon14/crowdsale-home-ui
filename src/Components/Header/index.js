@@ -9,7 +9,7 @@ import { SwitcherLang } from '../SwitcherLang'
 import { Sticky, Scroll, Resize, MobileMenu } from './Helpers'
 import GithubCorner from 'react-github-corner'
 
-const Header = ({ sections = [], getTranslation }) => (
+const Header = ({ sections = [], selectedLanguage, getTranslation }) => (
   <MobileMenu
     render={({ isOpen, onChange, onClose }) => (
       <div className={isOpen ? 'open' : ''}>
@@ -58,7 +58,9 @@ const Header = ({ sections = [], getTranslation }) => (
                                 theme={theme}
                                 label={getTranslation('header.whitepaper')}
                                 type="secondary"
-                                onClick={DownloadWhitepaper}
+                                onClick={() =>
+                                  DownloadWhitepaper(selectedLanguage)
+                                }
                               />
                             </ul>
                           </div>
@@ -72,7 +74,11 @@ const Header = ({ sections = [], getTranslation }) => (
                             }
                             type={isMobile ? 'primary menu' : 'secondary'}
                             icon={isMobile ? 'fa-bars menu' : ''}
-                            onClick={isMobile ? onChange : DownloadWhitepaper}
+                            onClick={
+                              isMobile
+                                ? onChange
+                                : () => DownloadWhitepaper(selectedLanguage)
+                            }
                           />
 
                           <div className={isMobile ? 'hide' : ''}>
@@ -99,6 +105,7 @@ const Header = ({ sections = [], getTranslation }) => (
 
 Header.propTypes = {
   sections: PropTypes.array,
+  selectedLanguage: PropTypes.string,
   getTranslation: PropTypes.func
 }
 
