@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import graph from './Assets/graph.png'
 import { Advantages } from './Advantages'
 
-const Description = ({ getTranslation }) => (
+const Description = ({ selectedLanguage, getTranslation }) => (
   <div className="description">
     <div className="container">
       <div className="banner-content">
@@ -30,12 +30,16 @@ const Description = ({ getTranslation }) => (
       </div>
     </div>
 
-    <Advantages getTranslation={getTranslation} />
+    <Advantages
+      selectedLanguage={selectedLanguage}
+      getTranslation={getTranslation}
+    />
     <style jsx>{style}</style>
   </div>
 )
 
 Description.propTypes = {
+  selectedLanguage: PropTypes.string,
   getTranslation: PropTypes.func
 }
 
