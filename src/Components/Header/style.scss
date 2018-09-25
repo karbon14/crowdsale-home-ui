@@ -10,11 +10,7 @@ header {
   border-bottom-color: rgba(0, 0, 0, 0.04);
 
   &.sticky {
-    background-image: linear-gradient(
-      to bottom right,
-      #290075 0%,
-      #086ddf 100%
-    );
+    background-color: #0b3795;
     border-bottom-color: rgba(0, 0, 0, 0.04);
     position: fixed;
     width: 100%;
