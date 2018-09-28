@@ -39,7 +39,7 @@ const Contact = ({ getTranslation }) => (
                 links={[
                   {
                     name: 'Facebook',
-                    url: 'https://www.facebook.com/karbon.crypto.9',
+                    url: 'https://www.facebook.com/karbon.crypto',
                     icon: 'fa-facebook'
                   },
                   {
