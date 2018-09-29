@@ -15,11 +15,45 @@ const HtmlPlugin = new HtmlWebpackPlugin({
   baseHref: '/',
   inject: false,
   mobile: true,
+  scripts: ['https://www.googletagmanager.com/gtag/js?id=UA-126698710-1'],
   meta: [
     { charset: 'utf-8' },
     {
       name: 'description',
-      content: 'Karbon14 home'
+      content: 'Decentralizing the Proof of Lifes in the Blockchain'
+    },
+    {
+      name: 'keywords',
+      content:
+        'Karbon14, ICO, Crowdsale, Blockchain, Samart Contracts, Proof of Life'
+    },
+    {
+      property: 'og:description',
+      content: 'Decentralizing the Proof of Lifes in the Blockchain'
+    },
+    {
+      property: 'canonical',
+      content: 'https://karbon14.org/'
+    },
+    {
+      property: 'image',
+      content: 'https://karbon14.org/preview.jpg'
+    },
+    {
+      property: 'og:title',
+      content: 'Karbon14'
+    },
+    {
+      property: 'og:type',
+      content: 'website'
+    },
+    {
+      property: 'og:url',
+      content: 'https://karbon14.org/'
+    },
+    {
+      property: 'og:site_name',
+      content: 'Karbon14'
     }
   ]
 })
