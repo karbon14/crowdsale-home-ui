@@ -25,7 +25,7 @@ const HtmlPlugin = new HtmlWebpackPlugin({
     {
       name: 'keywords',
       content:
-        'Karbon14, ICO, Crowdsale, Blockchain, Samart Contracts, Proof of Life'
+        'Karbon14, ICO, Crowdsale, Blockchain, Smart Contracts, Proof of Life, Ethereum, ERC20, ERC-20'
     },
     {
       property: 'og:description',
@@ -54,6 +54,10 @@ const HtmlPlugin = new HtmlWebpackPlugin({
     {
       property: 'og:site_name',
       content: 'Karbon14'
+    },
+    {
+      name: 'google-site-verification',
+      content: '-8U4YlewY12zEvNP-i_1Pgw9DsSa-9mJTwLUBF5TkNI'
     }
   ]
 })
