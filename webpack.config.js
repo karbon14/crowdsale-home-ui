@@ -81,23 +81,23 @@ const HtmlPlugin = new HtmlWebpackPlugin({
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "Books",
-          "item": "https://example.com/books"
+          "name": "Whitepaper",
+          "item": "https://whitepaper.karbon14.org"
         },{
           "@type": "ListItem",
           "position": 2,
-          "name": "Authors",
-          "item": "https://example.com/books/authors"
+          "name": "Airdrop",
+          "item": "https://airdrop.karbon14.org"
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Ann Leckie",
-          "item": "https://example.com/books/authors/annleckie"
+          "name": "Crowdsale",
+          "item": "https://crowdsale.karbon14.org"
         },{
           "@type": "ListItem",
           "position": 4,
-          "name": "Ancillary Justice",
-          "item": "https://example.com/books/authors/ancillaryjustice"
+          "name": "Telegram group",
+          "item": "https://t.me/karbon14"
         }]
       }
     </script>
