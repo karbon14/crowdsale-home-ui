@@ -29,7 +29,7 @@ const HtmlPlugin = new HtmlWebpackPlugin({
     },
     {
       property: 'og:description',
-      content: 'Decentralizing the Proof of Lifes in the Blockchain'
+      content: 'Decentralizing the Proof of Life in the Blockchain'
     },
     {
       property: 'canonical',
@@ -59,7 +59,49 @@ const HtmlPlugin = new HtmlWebpackPlugin({
       name: 'google-site-verification',
       content: '-8U4YlewY12zEvNP-i_1Pgw9DsSa-9mJTwLUBF5TkNI'
     }
-  ]
+  ],
+  headHtmlSnippet: `
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Karbon14",
+        "url": "https://karbon14.org",
+        "logo": "https://karbon14.org/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/k14project",
+          "https://twitter.com/k14project",
+          "https://github.com/karbon14",
+          "https://medium.com/@karbon14"
+        ]
+      }
+      {
+        "@context": "http://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Whitepaper",
+          "item": "https://whitepaper.karbon14.org"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Airdrop",
+          "item": "https://airdrop.karbon14.org"
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Crowdsale",
+          "item": "https://crowdsale.karbon14.org"
+        },{
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Telegram group",
+          "item": "https://t.me/karbon14"
+        }]
+      }
+    </script>
+  `
 })
 
 const getPlugins = argv => {
