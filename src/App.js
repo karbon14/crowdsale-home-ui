@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 moment.tz.setDefault('America/Argentina/Buenos_Aires')
 
 import './Assets/preview.jpg'
+import './Assets/logo.png'
 import { Karbon } from './Pages/Karbon'
 import { NoMatch } from './Pages/NoMatch'
 
