@@ -20,7 +20,7 @@ const HtmlPlugin = new HtmlWebpackPlugin({
     { charset: 'utf-8' },
     {
       name: 'description',
-      content: 'Decentralizing the Proof of Lifes in the Blockchain'
+      content: 'Decentralizing the Proof of Life in the Blockchain'
     },
     {
       name: 'keywords',
@@ -75,6 +75,8 @@ const HtmlPlugin = new HtmlWebpackPlugin({
           "https://medium.com/@karbon14"
         ]
       }
+    </script>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BreadcrumbList",
