@@ -5,6 +5,7 @@ import { Button } from '@react-core/button'
 import { DownloadWhitepaper } from '../Utils'
 import style from './style.scss'
 import logo from './Assets/K14-Logo.svg'
+import airdrop from './Assets/airdrop.svg'
 import { SwitcherLang } from '../SwitcherLang'
 import { Sticky, Scroll, Resize, MobileMenu } from './Helpers'
 import GithubCorner from 'react-github-corner'
@@ -41,15 +42,24 @@ const Header = ({ sections = [], selectedLanguage, getTranslation }) => (
                         <div className="links__area">
                           <div>
                             <ul>
-                              {sections.map((section, index) => (
+                              {sections.map((section = {}, index) => (
                                 <li key={index}>
                                   <a
+                                    href={section.href}
+                                    target={section.target}
+                                    rel="noopener noreferrer"
                                     className={
-                                      isSectionActive(section) ? 'active' : ''
+                                      isSectionActive(section.name)
+                                        ? 'active'
+                                        : ''
                                     }
-                                    onClick={() => onGoToSection(section)}
+                                    onClick={() =>
+                                      section.action
+                                        ? section.action()
+                                        : onGoToSection(section.name)
+                                    }
                                   >
-                                    {getTranslation(`header.${section}`)}
+                                    {getTranslation(`header.${section.name}`)}
                                   </a>
                                 </li>
                               ))}
@@ -65,21 +75,31 @@ const Header = ({ sections = [], selectedLanguage, getTranslation }) => (
                             </ul>
                           </div>
 
-                          <Button
-                            theme={theme}
-                            label={
-                              isMobile
-                                ? ''
-                                : getTranslation('header.whitepaper')
-                            }
-                            type={isMobile ? 'primary menu' : 'secondary'}
-                            icon={isMobile ? 'fa-bars menu' : ''}
-                            onClick={
-                              isMobile
-                                ? onChange
-                                : () => DownloadWhitepaper(selectedLanguage)
-                            }
-                          />
+                          <div className="menu__area">
+                            <a
+                              target="_blank"
+                              href={process.env.AIRDROP_URL}
+                              rel="noopener noreferrer"
+                            >
+                              <img src={airdrop} alt="Airdrop" />
+                            </a>
+
+                            <Button
+                              theme={theme}
+                              label={
+                                isMobile
+                                  ? ''
+                                  : getTranslation('header.whitepaper')
+                              }
+                              type={isMobile ? 'primary menu' : 'secondary'}
+                              icon={isMobile ? 'fa-bars menu' : ''}
+                              onClick={
+                                isMobile
+                                  ? onChange
+                                  : () => DownloadWhitepaper(selectedLanguage)
+                              }
+                            />
+                          </div>
 
                           <div className={isMobile ? 'hide' : ''}>
                             <GithubCorner

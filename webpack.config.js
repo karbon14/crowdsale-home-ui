@@ -8,7 +8,7 @@ const APP_DIR = path.resolve(__dirname, 'src')
 
 // Html Auto generator
 const HtmlPlugin = new HtmlWebpackPlugin({
-  title: 'Karbon14',
+  title: 'Karbon14 | Decentralizing the Proof of Life in the Blockchain',
   template: require('html-webpack-template'),
   appMountId: 'app',
   favicon: 'src/favicon.ico',
@@ -76,33 +76,6 @@ const HtmlPlugin = new HtmlWebpackPlugin({
         ]
       }
     </script>
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Whitepaper",
-          "item": "https://whitepaper.karbon14.org"
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Airdrop",
-          "item": "https://airdrop.karbon14.org"
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Crowdsale",
-          "item": "https://crowdsale.karbon14.org"
-        },{
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Telegram group",
-          "item": "https://t.me/karbon14"
-        }]
-      }
-    </script>
   `
 })
 
@@ -116,6 +89,9 @@ const getPlugins = argv => {
       ),
       'process.env.CROWDSALE_URL': JSON.stringify(
         process.env.CROWDSALE_URL || 'https://crowdsale.karbon14.org'
+      ),
+      'process.env.AIRDROP_URL': JSON.stringify(
+        process.env.AIRDROP_URL || 'https://airdrop.karbon14.org'
       ),
       'process.env.NETWORK': JSON.stringify(process.env.NETWORK || '1')
     })
