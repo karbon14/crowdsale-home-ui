@@ -103,6 +103,23 @@ header {
         }
       }
     }
+
+    .menu__area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        margin-left: -16px;
+        margin-top: -8px;
+        transform: rotate(14deg);
+      }
+    }
   }
 }
 
@@ -148,6 +165,12 @@ header {
           }
         }
       }
+
+      .menu__area {
+        a {
+          margin-top: initial;
+        }
+      }
     }
   }
 
@@ -156,7 +179,7 @@ header {
 
     .container {
       .links__area {
-        & > div {
+        & > div:not(menu__area) {
           background: #0b0c22;
           position: absolute;
           left: 0;
@@ -193,6 +216,14 @@ header {
           }
         }
       }
+
+      .menu__area {
+        position: initial !important;
+
+        a {
+          display: none;
+        }
+      }
     }
   }
 }
@@ -211,6 +242,20 @@ header {
               padding: 0 15px;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  header {
+    .container {
+      .menu__area {
+        a {
+          margin-right: 10px;
+          margin-left: initial;
+          margin-top: initial;
         }
       }
     }

@@ -47,13 +47,17 @@ const Karbon = () => (
               getTranslation={getTranslation}
               selectedLanguage={selectedLanguage}
               sections={[
-                'description',
-                'tokens',
-                'apps',
-                'team',
-                'faq',
-                'contact',
-                'subscribe'
+                { name: 'description' },
+                { name: 'tokens' },
+                { name: 'apps' },
+                { name: 'team' },
+                { name: 'faq' },
+                { name: 'contact' },
+                {
+                  name: 'airdrop',
+                  href: process.env.AIRDROP_URL,
+                  target: '_blank'
+                }
               ]}
             />
             <Intro
