@@ -24,7 +24,7 @@ const Team = ({ getTranslation }) => (
           name="Natanael"
           surname="Zalazar"
           twitter="https://twitter.com/zalazarnatanael"
-          linkedin="www.linkedin.com/in/zalazarnatanael"
+          linkedin="https://www.linkedin.com/in/zalazarnatanael"
           github="https://github.com/zalazarnatanael"
           charge="CO-FOUNDER"
           tech="Senior Full-stack"
