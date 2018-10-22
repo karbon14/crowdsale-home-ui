@@ -72,11 +72,11 @@ npm run start
 ## Team
 
 [![Natanael Zalazar](https://avatars.githubusercontent.com/u/11928153?s=64)](https://github.com/zalazarnatanael)  |
-[![Vision K14](https://avatars3.githubusercontent.com/u/41881618?s=64)](https://github.com/visionk14) |
-[![Wolverine K14](https://avatars3.githubusercontent.com/u/41843272?s=64)](https://github.com/wolverinek14) |
+[![Jose Luis Casella](https://avatars2.githubusercontent.com/u/23145933?s=64)](https://github.com/jl-casella) |
+[![Walter Zalazar](https://avatars3.githubusercontent.com/u/5795257?s=64)](https://github.com/wzalazar) |
 |---|---|---|
 Natanael Zalazar | Vision K14 | Wolverine K14 |
-:octocat:[@zalazarnatanael](https://github.com/zalazarnatanael) | :octocat:[@visionk14](https://github.com/visionk14) | :octocat:[@wolverinek14](https://github.com/wolverinek14) |
+:octocat:[@zalazarnatanael](https://github.com/zalazarnatanael) | :octocat:[@jl-casella](https://github.com/jl-casella) | :octocat:[@wzalazar](https://github.com/wzalazar) |
 
 ## License
 [MIT](https://github.com/karbon14/home-ui/blob/master/.github/LICENSE)
