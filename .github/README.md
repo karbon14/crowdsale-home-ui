@@ -72,10 +72,10 @@ npm run start
 ## Team
 
 [![Natanael Zalazar](https://avatars.githubusercontent.com/u/11928153?s=64)](https://github.com/zalazarnatanael)  |
-[![Vision K14](https://avatars3.githubusercontent.com/u/41881618?s=64)](https://github.com/visionk14) |
-[![Wolverine K14](https://avatars3.githubusercontent.com/u/41843272?s=64)](https://github.com/wolverinek14) |
+[![Jose Luis Casella](https://avatars2.githubusercontent.com/u/23145933?s=64)](https://github.com/visionk14) |
+[![Walter Zalazar](https://avatars3.githubusercontent.com/u/5795257?s=64)](https://github.com/wolverinek14) |
 |---|---|---|
-Natanael Zalazar | Vision K14 | Wolverine K14 |
+Natanael Zalazar | Jose Luis Casella | Walter Zalazar |
 :octocat:[@zalazarnatanael](https://github.com/zalazarnatanael) | :octocat:[@visionk14](https://github.com/visionk14) | :octocat:[@wolverinek14](https://github.com/wolverinek14) |
 
 ## License
