@@ -37,7 +37,7 @@ const HtmlPlugin = new HtmlWebpackPlugin({
     },
     {
       property: 'og:image',
-      content: 'https://karbon14.org/preview.jpg'
+      content: 'https://deploy-preview-147--karbon14.netlify.com/preview.jpg'
     },
     {
       property: 'og:title',
