@@ -33,7 +33,7 @@ const HtmlPlugin = new HtmlWebpackPlugin({
     },
     {
       property: 'canonical',
-      content: 'https://karbon14.org/'
+      content: 'https://deploy-preview-147--karbon14.netlify.com/'
     },
     {
       property: 'og:image',
@@ -49,7 +49,7 @@ const HtmlPlugin = new HtmlWebpackPlugin({
     },
     {
       property: 'og:url',
-      content: 'https://karbon14.org/'
+      content: 'https://deploy-preview-147--karbon14.netlify.com/'
     },
     {
       property: 'og:site_name',
@@ -67,7 +67,7 @@ const HtmlPlugin = new HtmlWebpackPlugin({
         "@type": "Organization",
         "name": "Karbon14",
         "url": "https://karbon14.org",
-        "logo": "https://karbon14.org/logo.png",
+        "logo": "https://deploy-preview-147--karbon14.netlify.com/logo.png",
         "sameAs": [
           "https://www.facebook.com/k14project",
           "https://twitter.com/k14project",
