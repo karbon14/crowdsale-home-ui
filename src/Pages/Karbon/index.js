@@ -6,6 +6,7 @@ import {
   Intro,
   Description,
   Tokens,
+  Roadmap,
   Apps,
   Team,
   Faq,
@@ -49,6 +50,7 @@ const Karbon = () => (
               sections={[
                 { name: 'description' },
                 { name: 'tokens' },
+                { name: 'roadmap' },
                 { name: 'apps' },
                 { name: 'team' },
                 { name: 'faq' },
@@ -71,6 +73,7 @@ const Karbon = () => (
               getTranslation={getTranslation}
             />
             <Tokens getTranslation={getTranslation} />
+            <Roadmap getTranslation={getTranslation} />
             <Apps getTranslation={getTranslation} />
             <Team getTranslation={getTranslation} />
             <Faq getTranslation={getTranslation} />

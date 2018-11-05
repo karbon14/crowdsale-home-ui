@@ -1,0 +1,21 @@
+{
+  "section":"ROADMAP",
+  "title":"Nuestro Recorrido",
+  "description":"Con la ayuda de nuestro equipo, contributores e inversores, presentamos a continuación los objetivos que nos proponemos alcanzar.",
+  "option1Title": "Q1 2018",
+  "option1Description": "Búsqueda y análisis del estado actual del mercado.",
+  "option2Title": "Q2 2018", 
+  "option2Description": "Confección del Whitepaper. Definición de la escala de la ICO.",
+  "option3Title": "Q3 2018",
+  "option3Description": "Desarrollo de la ICO Crowdsale UI. Subida de Smart Contracts a la ETH Main net.",
+  "option4Title": "Q4 2018",
+  "option4Description": "Airdrop lanzado. Inicio de la ICO Crowdsale. Desarrollo de Demo/MVP.",
+  "option5Title": "Q1 2019",
+  "option5Description": "ICO Crowdsale finaliza el 1ro de Mayo. Búsqueda de inversores y patrocinio.",
+  "option6Title": "Q2 2019",
+  "option6Description": "Búsqueda para cubrir posiciones libres en el equipo. Presencia del token K14 en exchanges.",
+  "option7Title": "Q3 2019",
+  "option7Description": "Inicio del desarrollo de la aplicación Karbon14 y sus características principales.",
+  "option8Title": "Q4 2019",
+  "option8Description": "Inicio del desarrollo de la aplicación móvil de Karbon14 (iOS/Android)."
+}

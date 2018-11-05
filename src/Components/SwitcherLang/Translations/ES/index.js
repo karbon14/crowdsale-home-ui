@@ -3,6 +3,7 @@ import intro from './Sections/intro.json'
 import counter from './Sections/counter.json'
 import description from './Sections/description.json'
 import tokens from './Sections/tokens.json'
+import roadmap from './Sections/roadmap.json'
 import apps from './Sections/apps.json'
 import team from './Sections/team.json'
 import faq from './Sections/faq.json'
@@ -14,6 +15,7 @@ const translation = {
   counter,
   description,
   tokens,
+  roadmap,
   apps,
   team,
   faq,
