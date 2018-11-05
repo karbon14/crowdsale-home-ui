@@ -1,0 +1,21 @@
+{
+  "section":"ROADMAP",
+  "title":"The Timeline",
+  "description":"After being assisted by our team, contributors and investors, we finally present the milestones that we are seeking to  accomplish.",
+  "option1Title": "Q1 2018",
+  "option1Description": "Research and analysis of the current market situation.",
+  "option2Title": "Q2 2018",
+  "option2Description": "Whitepaper development. ICO financial model established.",
+  "option3Title": "Q3 2018",
+  "option3Description": "ICO Crowdsale buy UI developed. Smart Contracts deployed to ETH Main net.",
+  "option4Title": "Q4 2018",
+  "option4Description": "Airdrop launched. ICO Crowdsale start. Demo/MVP development.",
+  "option5Title": "Q1 2019",
+  "option5Description": "ICO Crowdsale ends on May 1st. Search for investment and advisors.",
+  "option6Title": "Q2 2019",
+  "option6Description": "Team number increase to cover open positions. K14 token on exchanges.",
+  "option7Title": "Q3 2019",
+  "option7Description": "Development start for the first features of the Karbon14 solution and SDKs.",
+  "option8Title": "Q4 2019",
+  "option8Description": "Development start for the Karbon14 mobile App solution (iOS/Android)."
+}

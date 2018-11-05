@@ -12,3 +12,11 @@
     #086ddf 100%
   );
 }
+
+@media only screen and (min-width: 991px)  and (max-width: 1200px) {
+  .karbon {
+    :global(.links__area li.menu-option-airdrop) {
+      display: none !important;
+    }
+  }
+}
