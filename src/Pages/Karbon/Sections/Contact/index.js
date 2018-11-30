@@ -48,6 +48,11 @@ const Contact = ({ getTranslation }) => (
                     icon: 'fa-twitter'
                   },
                   {
+                    name: 'G+',
+                    url: 'https://plus.google.com/+k14project',
+                    icon: 'fa-google-plus'
+                  },
+                  {
                     name: 'GitHub',
                     url: 'https://github.com/karbon14',
                     icon: 'fa-github'

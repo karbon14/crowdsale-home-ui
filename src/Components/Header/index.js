@@ -43,7 +43,10 @@ const Header = ({ sections = [], selectedLanguage, getTranslation }) => (
                           <div>
                             <ul>
                               {sections.map((section = {}, index) => (
-                                <li key={index}>
+                                <li
+                                  key={index}
+                                  className={`menu-option-${section.name}`}
+                                >
                                   <a
                                     href={section.href}
                                     target={section.target}
