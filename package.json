@@ -51,7 +51,8 @@
     "to-string-loader": "1.1.5",
     "webpack": "4.16.4",
     "webpack-cli": "3.1.0",
-    "webpack-dev-server": "3.1.10"
+    "webpack-dev-server": "3.1.10",
+    "websocket": "1.0.28"
   },
   "dependencies": {
     "@babel/runtime": "7.0.0-beta.55",
