@@ -55,7 +55,7 @@
     "websocket": "1.0.28"
   },
   "dependencies": {
-    "@babel/runtime": "7.0.0-beta.55",
+    "@babel/runtime": "7.2.0",
     "@hocs/debounce-handler": "0.4.1",
     "@hocs/with-callback-on-change": "0.3.0",
     "@react-core/button": "0.1.42",
