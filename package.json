@@ -85,7 +85,7 @@
     "react-github-corner": "2.3.0",
     "react-html-parser": "2.0.2",
     "react-router-dom": "4.3.1",
-    "react-toastify": "4.2.3",
+    "react-toastify": "4.5.2",
     "recharts": "1.1.0",
     "smoothscroll-polyfill": "0.4.3",
     "url-search-params-polyfill": "4.0.1",
