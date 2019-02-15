@@ -34,7 +34,7 @@
     "babel-preset-stage-2": "6.24.1",
     "copy-webpack-plugin": "4.5.2",
     "css-loader": "1.0.0",
-    "eslint": "5.1.0",
+    "eslint": "5.14.0",
     "eslint-config-prettier": "2.10.0",
     "eslint-plugin-prettier": "2.6.2",
     "eslint-plugin-react": "7.11.0",
