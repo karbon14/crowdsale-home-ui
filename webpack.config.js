@@ -110,6 +110,16 @@ const getPlugins = argv => {
           from: './_headers',
           to: './_headers',
           toType: 'file'
+        },
+        {
+          from: './src/Assets/logo-token.png',
+          to: './logo-token.png',
+          toType: 'file'
+        },
+        {
+          from: './src/Assets/logo-token-200.png',
+          to: './logo-token-200.png',
+          toType: 'file'
         }
       ])
     ]
