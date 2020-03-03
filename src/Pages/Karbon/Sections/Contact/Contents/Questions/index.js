@@ -10,7 +10,7 @@ const Questions = ({ getTranslation }) => (
       <ul>
         <li>
           <em className="fa fa-envelope" />
-          <span>team@karbon14.org</span>
+          <span>karbon14.team@gmail.com</span>
         </li>
 
         <li>
